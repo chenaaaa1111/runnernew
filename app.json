@@ -1,0 +1,51 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/runnew/runnew",
+    "pages/forwho/forwho",
+    "pages/home/home",
+     "pages/Thems/thems",
+     "pages/running/running",
+     "pages/test/test",
+     "pages/logs/logs",
+     "pages/ranking/ranking",
+     "pages/Friendslife/friendslife"
+            
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ffc801",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "images/icons/index_icon.png",
+        "selectedIconPath": "images/icons/index_icon_HL.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/Thems/thems",
+        "iconPath": "images/icons/sports_icon.png",
+        "selectedIconPath": "images/icons/sports_icon_HL.png",
+        "text": "运动"
+      },
+      {
+        "pagePath": "pages/Friendslife/friendslife",
+        "iconPath": "images/icons/circle_icon.png",
+        "selectedIconPath": "images/icons/circle_icon_HL.png",
+        "text": "圈子"
+      }
+    ]
+  },
+  "usingComponents": {
+    "login":"./component/login/index"
+  }
+
+}

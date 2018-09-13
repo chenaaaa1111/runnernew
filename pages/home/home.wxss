@@ -1,0 +1,34 @@
+/* pages/home/home.wxss */
+@import "./../../commen/commen.wxss";
+.container {
+  padding-left: 28rpx;
+  padding-right: 28rpx;
+
+} 
+.titlebar{
+  padding-top: 28rpx;
+  padding-bottom: 28rpx;
+  font-size: 30rpx;
+}
+.titlebar .second{
+  margin-left: 120rpx;
+  margin-right: 19rpx;
+}
+.thir{
+  margin-right: 195rpx;
+  margin-left: 20rpx;
+}
+.themimages{
+  width: 100%;
+  height: 350rpx;
+}
+.fenge{
+  height: 22rpx;
+  width: 100%;
+}
+.bottomimage{
+  width: 100%;
+}
+.runnavigator{
+  height: 350rpx;
+}

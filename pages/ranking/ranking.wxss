@@ -1,0 +1,77 @@
+/* pages/ranking/ranking.wxss */
+.container{
+  padding: 10rpx;
+  padding-bottom: 0rpx;
+  padding-left: 20rpx;
+  background: #fff;
+}
+.rankContainer{
+  display: flex;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-bottom: 1px solid #ccc;
+}
+.smalltx{
+  width: 40rpx;
+  height: 40rpx;
+}
+.tx{
+  width: 70rpx;
+  height: 70rpx;
+  padding-right: 28rpx;
+  vertical-align: middle;
+  margin-top:10rpx;
+
+}
+.number{
+  padding-left: 50rpx;
+  padding-right: 28rpx;
+  font-size: 36rpx;
+  vertical-align: middle;
+}
+.nameText{
+  width: 170rpx;
+  font-size: 30rpx;
+ 
+}
+.images{
+  width: 327rpx;
+  /* text-overflow: ellipsis;
+ 
+display: -webkit-box;
+-webkit-line-clamp: 1;
+-webkit-box-orient: vertical; */
+overflow: hidden;
+}
+.smalltx{
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+.eclipse{
+  margin-bottom: 3rpx;
+}
+.active{
+  color: #09bb07;
+}
+page,.body{
+  background: #f5f5f5;
+  padding-bottom: 20rpx;
+  height: 100%;
+}
+.message{
+  text-align: center;
+  margin-top: 30rpx;
+  border-top: 1px dashed #000;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 24rpx;
+  color: #666;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+}
+
+.boderbtom{
+}
+.nobottom{
+  border-bottom: none;
+}

@@ -1,0 +1,15 @@
+<view>
+      <swiper swiperList="{{swiperList}}"></swiper>
+</view>
+<view class='container'>
+<view class='titlebar'>
+    <text >热门推荐</text>
+    <text class='second fc999' data-val="bm" bindtap='gotoThems'>暴漫</text>
+    <text class='fc999' >|</text>
+    <text class='thir fc999' bindtap='gotoThems' data-val="sx">生肖</text>
+    <text class='fs_24 fc999' >更多>></text>
+</view>
+  <image class="imgcover themimages" src='{{xingzuo}}' bindtap='gotoThems'></image>
+    <image src='../../images/iosfenge.png' class='fenge'></image>
+    <image class='bottomimage' src='{{shengxiao}}'></image>
+</view>

@@ -1,0 +1,65 @@
+<!--pages/ranking/ranking.wxml-->
+<view class='body'>
+      <view class='container'>
+    <view class='rankContainer'>
+        <view class='number '>1</view>
+        <image src='./../../images/ranking/dog.png' class='tx'></image>
+        <view class='nameText active'>不过如此</view>
+        <view class='images'>
+            <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
+             <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
+              <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
+               <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
+                <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
+                 <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
+                 <text class='eclipse'>...</text>
+        </view>
+    </view>
+      <view class='rankContainer nobottom'>
+        <view class='number '>2</view>
+        <image src='./../../images/ranking/dog.png' class='tx'></image>
+        <view class='nameText'>不过如此</view>
+        <view class='images'>
+            <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
+             <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
+              <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
+               <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
+                <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
+                 <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
+                 <text class='eclipse'>...</text>
+        </view>
+    </view>
+      <view class='rankContainer'>
+        <view class='number '>3</view>
+        <image src='./../../images/ranking/dog.png' class='tx'></image>
+        <view class='nameText'>不过如此</view>
+        <view class='images'>
+            <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
+             <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
+              <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
+               <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
+                <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
+                 <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
+                 <text class='eclipse'>...</text>
+        </view>
+    </view>
+      <view class='rankContainer boderbtom'>
+        <view class='number '>4</view>
+        <image src='./../../images/ranking/dog.png' class='tx'></image>
+        <view class='nameText'>不过如此</view>
+        <view class='images '>
+            <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
+             <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
+              <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
+               <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
+                <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
+                 <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
+                 <text class='eclipse'>...</text>
+        </view>
+    </view>
+</view>
+    <view class='bottom'>
+        <view class='message'>到底喽~</view>
+    </view>
+</view>
+

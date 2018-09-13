@@ -1,0 +1,110 @@
+/* pages/running/running.wxss */
+.runningImage{
+   height: 690rpx;
+   width: 690rpx;
+   border: none;
+}
+.none{
+  display:block; 
+}
+.canvas{
+  position: absolute;
+  top: 0rpx;
+  left: 29rpx;
+  width:690rpx;
+  height: 690rpx;
+  border:none;
+}
+.imgContainer{
+  text-align: center;
+   padding-left: 30rpx;
+  padding-right: 30rpx;
+  border: none;
+  font-size: 0;
+  height: 690rpx;
+}
+.textContainer{
+  padding-left: 50rpx;
+  color: #666;
+}
+.for{
+  padding-left: 132rpx;
+  color: #666;
+}
+.flima{
+  position: absolute;
+}
+.them{
+  font-size: 32rpx;
+  color: #666;
+}
+.themafter{
+  padding-left: 160rpx;
+  font-size: 32rpx;
+  color: #666;
+}
+.runcontain{
+  display: flex;
+  position: relative;
+  padding-left: 50rpx;
+  margin-top: 20rpx;
+}
+.imass{
+  width: 361rpx;
+  height:300rpx;
+}
+ .right{
+  position: absolute;
+  right: 30rpx;
+}
+.number{
+  position: absolute;
+  left: 40rpx;
+  top: 60rpx;
+   font-size: 40rpx;
+  color: #fff;
+}
+.numberright{
+  right: 80rpx;
+  top: 60rpx;
+  position: absolute;
+}
+.tNuber{
+  margin-top: 40rpx;
+  font-size: 40rpx;
+  color: #fff;
+}
+.runnumber{
+  font-size: 40rpx;
+  color: #fff;
+}
+.baposition{
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 1374rpx;
+}
+.textform{
+  width: 300rpx;
+  height: 80rpx;
+}
+.bottomView{
+  margin-top: 330rpx;
+  padding-left:50rpx;
+}
+.textimage{
+  margin-left:30rpx;
+}
+#canvasbg{
+  width: 690rpx;
+  height: 690rpx;
+  position: relative;
+}
+.bg{
+  position: relative;
+  left: 0;
+   width:690rpx;
+   height: 690rpx;
+   border:none;
+}

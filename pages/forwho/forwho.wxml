@@ -1,0 +1,49 @@
+
+<!--pages/forwho/forwho.wxml-->
+<view class='bg'>
+    <image class='bgi' src='./../../images/forwho/backgrud.png'>  
+    </image>
+
+    <view class='header'>
+        今日为 <text class="friend">{{forwhom}}</text> <text class='text2'> 而跑 @ </text><view class='desc'><input placeholder='请输入十字以内' maxlength='10' /></view> 
+     
+    </view>
+    <view class='containerimages'>
+        <view class='itemimg' wx:for="{{chooseItem}}" data-form="{{item.text}}"                                bindtap='chooseFom'>
+                <image src='{{item.bg}}'                           class='bgsmall' >
+                
+                </image>
+                <text>{{item.text}}</text>
+        </view>
+        <!-- <view class='itemimg middle'>
+                <image src='./../../images/forwho/2@2x.png' class='bgsmall' ></image>
+                 <text>朋友</text>
+        </view>
+        <view class='itemimg'>
+                <image src='./../../images/forwho/3@2x.png' class='bgsmall' ></image>
+               <text>健康</text>  
+        </view> -->
+    </view>
+    <view class='loucontainer'>
+        <view class='louimage'>
+            <image class="leftbig"          src='./../../images/forwho/rounda.png'></image>
+        </view>
+         <view class='louimage'>
+            <image class="rightimg"         src='./../../images/forwho/speack.png'></image>
+        </view>
+    </view>
+    <view  class='loucontainer potell'>
+        <view class='tell'>
+            <image class='teimg' src='./../../images/forwho/tell.png'></image>
+            <text class='she'> 他? 她? 它? </text>
+        </view>
+    </view> 
+    <view class='header'>
+      <image class='forAll' src='./../../images/forwho/forallloud.jpg'> </image>
+    </view>
+    <view class='bottomView'>
+          <image class='imgbutton makesue'   src="./../../images/forwho/makesure.png" bindtap='addForwho'  ></image>
+            <image class=' imgbutton'  src="./../../images/forwho/tiaoguo.png" bindtap='gotoRun'  ></image>
+    </view> 
+
+</view> 

@@ -1,0 +1,117 @@
+<!--pages/Friendslife/friendslife.wxml-->
+<!--pages/ranking/ranking.wxml-->
+<scroll-view
+class='body'>
+      <view class='container'>
+    <view class='rankContainer'>
+        <view class='number '>1</view>
+        <image src='./../../images/ranking/dog.png' class='tx'></image>
+        <view class='nameText active'>不过如此</view>
+        <view class='images'>
+            <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
+             <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
+              <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
+               <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
+                <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
+                 <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
+                 <text class='eclipse'>...</text>
+        </view>
+    </view>
+      <view class='rankContainer'>
+        <view class='number '>2</view>
+        <image src='./../../images/ranking/dog.png' class='tx'></image>
+        <view class='nameText'>不过如此</view>
+        <view class='images'>
+            <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
+             <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
+              <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
+               <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
+                <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
+                 <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
+                 <text class='eclipse'>...</text>
+        </view>
+    </view>
+</view>
+   <navigator  url='./../ranking/ranking'>
+              <view class='bottom' >
+        <image class='dropimage' src='./../../images/friendsLife/down.png'></image> 
+    </view>
+   </navigator>
+  
+    <view class='coommm'>
+    
+    </view>
+  <view class='cner'>
+        <view class='ctainer'>
+            <view class='imageview'>
+                <image src="./../../images/ranking/dog.png" class='tx'></image>
+            </view>
+            <view class='right'>
+                <view class='name'>
+                    想飞的秘密
+                </view>
+                <view class='descm'>多运动，去外面走走</view>
+                <view class='descimages'>
+                    <view class='image'>
+                        <image class='friendimage' src="./../../images/themsItem/s6.png">
+                        </image>
+                    </view> 
+                    <view class='pubtime'>
+                        1小时前
+                    </view>
+                </view>
+            </view>
+    </view>
+    <view class='comment'>
+        <view class='comItem'>
+            <text class='rename'>残花落叶:</text><text class='desc'>那个男生是谁呀</text>
+           
+        </view>
+        <view class='comItem'>
+               <text class='rename'>想飞的秘密:</text> <text class='reward'>回复</text> 
+               <text class='rename'>残花落叶:</text>  <text>就不告诉你</text>
+        </view>
+        <view class='more'>
+            更多>>
+        </view>
+    </view>
+</view>
+ <view class='cner'>
+        <view class='ctainer'>
+            <view class='imageview'>
+                <image src="./../../images/ranking/dog.png" class='tx'></image>
+            </view>
+            <view class='right'>
+                <view class='name'>
+                    想飞的秘密
+                </view>
+                <view class='descm'>多运动，去外面走走</view>
+                <view class='descimages'>
+                    <view class='image'>
+                        <image class='friendimage' src="./../../images/themsItem/s6.png">
+                        </image>
+                    </view> 
+                    <view class='pubtime'>
+                        1小时前
+                    </view>
+                </view>
+            </view>
+    </view>
+    <view class='comment'>
+        <view class='comItem'>
+            <text class='rename'>残花落叶:</text><text class='desc'>那个男生是谁呀</text>
+           
+        </view>
+        <view class='comItem'>
+               <text class='rename'>想飞的秘密:</text> <text class='reward'>回复</text> 
+               <text class='rename'>残花落叶:</text>  <text>就不告诉你</text>
+        </view>
+          <view class='more'>
+                更多>>
+              </view>
+      
+    </view>
+</view>
+
+</scroll-view>
+

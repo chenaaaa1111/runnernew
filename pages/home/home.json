@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "运动酷咖",
+  "usingComponents": {
+    "swiper": "./../../component/swiper/swiper"
+  }
+  
+ 
+  
+}

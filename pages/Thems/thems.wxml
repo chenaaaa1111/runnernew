@@ -1,0 +1,31 @@
+<view class='container'>
+ <image class='bgi' src='./../../images/forwho/backgrud.png'>  
+    </image>
+    <view class="header">
+        <view class='left' bindtap='goback'>
+             <text class='left' >更多主题</text> 
+            <image class='backImage'  src="./../../images/themsItem/backicon.png"></image>
+            
+        </view>
+        <view class='right'>
+              <text class="hot">热门</text>
+                      <image class='dropup' src="{{'./../../images/themsItem/'+(dropUp?'dropUp_s.png':'drowUp.png')}}"></image>
+              <image class='dropdow' src="{{'./../../images/themsItem/'+(dropUp?'drowDown.png':'dropDown_s.png')}}"></image>              
+                <text class="easy">简单</text>
+                 <image class='esaydropup' src="{{'./../../images/themsItem/'+(easydropUp?'dropUp_s.png':'drowUp.png')}}"></image>
+              <image class='esaydropdow' src="{{'./../../images/themsItem/'+(easydropUp?'dropDown.png':'dropDown_s.png')}}"></image> 
+        </view>   
+    </view>
+    <view class='content'>
+        <view class='cardContent' wx:for="{{dataList}}"  wx:key="{{index}}" >
+           <view class='card' wx:for="{{item}}" bindtap='goTorun' id="{{item.name}}" data-isChoose="{{isChoose}}"
+           data-canRun="{{canRun}}"
+          style="background-image:url('{{item.dashedpath}}')"> 
+                <view class='level' >
+                   <image wx:for="{{item.starImages}}" wx:key="{{index}}"           src='./../../images/themsItem/star.png'></image>                
+                </view>
+          </view>
+          <view class='dashline'></view>
+        </view>
+    </view>
+</view>

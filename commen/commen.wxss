@@ -1,0 +1,9 @@
+.fs_24{
+  font-size: 24rpx;
+}
+.fc999{
+  color: #999;
+}
+.imgcover{
+  width: 100%;
+}

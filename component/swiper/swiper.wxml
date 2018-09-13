@@ -1,0 +1,16 @@
+<!--component/swiper.wxml-->
+<view>
+<swiper class='swiper-box' indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" indicatorDots="{{indicatorDots}}"
+  indicator-active-color="green"
+   interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{swiperList}}" wx:key="{{index}}">
+    <swiper-item>
+      <image src="{{item.path}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+</view>
+<view class='container'>
+
+</view>

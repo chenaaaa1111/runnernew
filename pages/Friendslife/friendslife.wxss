@@ -1,0 +1,147 @@
+/* pages/Friendslife/friendslife.wxss */
+/* pages/ranking/ranking.wxss */
+.container{
+  padding: 10rpx;
+  padding-left: 20rpx;
+  background: #fff;
+}
+.rankContainer{
+  display: flex;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-bottom: 1px solid #ccc;
+}
+.smalltx{
+  width: 40rpx;
+  height: 40rpx;
+}
+.tx{
+  width: 70rpx;
+  height: 70rpx;
+  padding-right: 28rpx;
+  vertical-align: middle;
+  margin-top:10rpx;
+
+}
+.number{
+  padding-left: 50rpx;
+  padding-right: 28rpx;
+  font-size: 36rpx;
+  vertical-align: middle;
+}
+.nameText{
+  width: 170rpx;
+  font-size: 30rpx;
+ 
+}
+.images{
+  width: 327rpx;
+
+overflow: hidden;
+}
+.smalltx{
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+.eclipse{
+  margin-bottom: 3rpx;
+}
+.active{
+  color: #09bb07;
+}
+page,.body{
+  padding-bottom: 40rpx;
+}
+.message{
+  text-align: center;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 24rpx;
+  color: #666;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+}
+.bottom{
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  box-shadow: 10rpx 80rpx 60rpx #ccc;
+}
+.bottom img{
+ 
+}
+.dropimage{
+  height:19rpx;
+  width:30rpx;
+  margin-bottom:4px;
+
+}
+.ctainer{
+  display: flex;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 40rpx;
+} 
+.cner{
+  margin-top: 10px;
+  background:#fff;
+}
+.right{
+  margin-right: 20rpx;
+}
+.right image{
+  max-width: 100%;
+}
+.descimages{
+
+}
+.friendimage{
+  width: 568rpx;
+}
+.name{
+  padding-top:24rpx;
+  font-size: 32rpx;
+  color: #576B99;
+}
+.rename{
+   font-size: 32rpx;
+  color: #576B99;
+  margin-right: 20rpx;
+}
+.imageview{
+  padding-top:25rpx;
+}
+.descm{
+  padding-bottom: 20rpx;
+  padding-top: 20rpx;
+  font-size: 28rpx;
+}
+.pubtime{
+  font-size: 20rpx;
+  color: #999;
+  margin-top:20rpx;
+}
+.comment{
+  padding-left: 40rpx;
+  padding-right: 80rpx;
+  padding-top:20rpx;
+}
+.desc{
+  font-size: 26rpx;
+}
+.comItem text{
+  font-size: 26rpx;
+}
+.reward{
+  margin-right: 20rpx;
+}
+.more{
+    color: #576B99;
+    padding-bottom: 20rpx;
+    padding-top: 20rpx;
+}
+.cner{
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0rpx;
+}
