@@ -1,5 +1,7 @@
 <!--pages/running/running.wxml-->
-
+<view>
+    <image src='./../../images/forwho/forwhom.png' class='topFont'></image>
+</view>
 <view class='imgContainer'>
     <!-- <image class='runningImage'
 src='./../../images/running/twive/react/20395594_xxl.jpg'></image> -->

@@ -101,10 +101,14 @@
 .friend{
   color: #999;
   font-size: 40rpx;
-  margin-left: 30rpx;
+  margin-left: 10rpx;
+  vertical-align: middle;
+  font-weight: 900;
 }
 .text2{
-  margin-left: 15rpx;
+  vertical-align:middle;
+  font-weight: 900;
+
 }
 .bottomView{
   padding-left: 30rpx;
@@ -125,4 +129,15 @@
 .forAll{
   width: 630rpx;
   height: 38rpx;
+}
+.sudu{
+  display: inline-block;
+  vertical-align: middle;
+  width: 143rpx;
+text-align: center;
+color: #754c29;
+
+}
+.active{
+  color: #754c29;
 }

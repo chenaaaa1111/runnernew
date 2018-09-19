@@ -1,0 +1,1 @@
+const baseImgUrl ="http://106.14.153.111:8080/sport/image/";

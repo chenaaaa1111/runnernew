@@ -1,7 +1,10 @@
 {
   "pages":[
+   
     "pages/index/index",
+    "pages/fillImage/fillImage",
     "pages/runnew/runnew",
+    "pages/cherish/cherish",
     "pages/forwho/forwho",
     "pages/home/home",
      "pages/Thems/thems",

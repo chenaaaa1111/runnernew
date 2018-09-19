@@ -8,10 +8,15 @@ Page({
    */
   data: {
       list:[],
+      dashedpath:'',//虚线图背景
+      path:'',//是先图背景
       runNum:0,//当前走了多少块
       startNum:0,
        todayNum:0,
-       toNum:0
+       toNum:0,
+      forWhat:'刘能',
+      forwhom:"洋洋",
+    golNumber:0        //下一目标数
   },
   dwImg: function (imgsrc, ctClass, ctId,xn,yn,num) {
     var self=this;
@@ -58,61 +63,87 @@ Page({
       }
     })
   },
+ 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+   
     var num = 0;
     var self = this;
+    request.req.requestForItem({ name: options.id },(res)=>{
+      console.log('为谁而跑',res);
+      this.setData({
+        forWhat: res.data.data.name,
+        forwhom: res.data.data.content
+      })
+    })
     request.req.requestImageRun({ smname: options.id }, function (res) {//获取图片信息
       console.log('图片信息', res.data.data);
+      var ImageInfor = res.data.data;
+      console.log();
+      self.setData({
+        dashedpath: ImageInfor.dashedpath,
+        path: ImageInfor.fullpath
+      })
       var list=res.data.data;
       var xn=list.heng;
       var yn=list.shu;
       var totolnum=xn*yn;
       var runNum = list.step;
       var penRunNum = runNum / totolnum;//平均每块地步数
+      var golNumber=0;  //下一目标
       self.setData({
         list: list
       })
+      // request.req.requestRunnerber({ name: options.id, status:1},function (res) {
+      //   console.log('res',res);
+      //   // var todayNum = res.data.data[res.data.data.length - 1].step;//今日总步数
+      //   //var todayNum = 3000;//今日总步数  测试
+      // });
+     //获得跑步时的步数
+      request.req.requestRunnerber({
+        name: options.id, status: 2
+      },function(res){
+        console.log('获得开始跑步时的步数',res);
+      })
      var startStep='';//运动开始时侯的步数
       var dingshi = setInterval(function () {//运动数据
-        request.req.requestRunnerber(function(res){
+        request.req.requestRunnerber({ name: options.id, status:1},function(res){
           console.log('运动数据****',res);
-          var todayNum = res.data.data[res.data.data.length - 1].step;//今日总步数
+         var runData=res.data.data;
+          console.log(runData);
+          // var todayNum = res.data.data[res.data.data.length - 1].step;//今日总步数
+          var todayNum = runData.many;//今日总步数 真实
+       
+          golNumber= penRunNum-(todayNum%penRunNum);
+          self.setData({ golNumber: golNumber})
           console.log('一共跑了步数',todayNum);
-          num = todayNum/penRunNum;//实际1⃣以步数算走了多                       //少块取整数
-          //num = num + 1; //测试
+          num = todayNum/penRunNum;//实际1以步数算走了多                       //少块取整数
+          // num = num + 1; //测试
           var runNum = self.data.runNum;
           if(runNum==num){
               return;
           }else{
             self.setData({ runNum:num})
-
           }
-    
           var toNum = (num + 1) * penRunNum - todayNum;
           self.setData({ todayNum: todayNum, toNum: toNum })
           var startNum = self.data.startNum;
           var step = parseInt((todayNum - startNum) / penRunNum)
-          if (num > totolnum) {
+          if (num > totolnum+1) {
             clearInterval(dingshi)
           }
-          var imgSrc = list.path;
-          self.dwImg(imgSrc, '.canvas', 'myCanvas',3, 5, num)
-          // console.log(res.data.data[res.data.data.length - 1]);
-       
-          // if ((step)>0){
-          //   num=num+step;
-          // }
+          var imgSrc = list.fullpath;
+          self.dwImg(imgSrc, '.canvas', 'myCanvas', ImageInfor.heng, ImageInfor.shu, num)
+   
           console.log('todayNum',todayNum);
 
         })
-     
-
-
-      }, 2000)
-
+      }, 20000)
+       self.setData({
+         dingshi: dingshi
+       })
       })
    
 
@@ -130,21 +161,33 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    var dingshi=this.data.dingshi;
+    if(dingshi){
+      clearInterval(dingshi)
 
+    }
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
+    var dingshi = this.data.dingshi;
+    if (dingshi) {
+      clearInterval(dingshi)
 
+    }
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
+    var dingshi = this.data.dingshi;
+    if (dingshi) {
+      clearInterval(dingshi)
 
+    }
   },
 
   /**

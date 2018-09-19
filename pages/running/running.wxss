@@ -26,7 +26,11 @@
 .textContainer{
   padding-left: 50rpx;
   color: #666;
+  display:flex;
+
 }
+
+
 .for{
   padding-left: 132rpx;
   color: #666;

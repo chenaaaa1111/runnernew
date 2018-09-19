@@ -1,0 +1,18 @@
+<view class="container"   wx:if="{{!isShowfill}}">
+<view class="pho">
+    <image class='' src='./../../images/chrics/photoreact.png'></image>
+    <image src='./../../images/chrics/family.png' class='fam' wx:if="{{hasUpload}}"></image>
+    <image src='./../../images/chrics/upload.png' class="imgUp" bindtap="chooseImageTap" wx:if="{{!hasUpload}}"></image>
+</view> 
+
+    <image class='bg' wx:if="{{!beforeUp}}" src='http://106.14.153.111:8080/sport/image/beforeup.jpg'></image>
+     <image class='bg' wx:if="{{beforeUp}}" src='http://106.14.153.111:8080/sport/image/uploaded.jpg'></image>
+    <view class='textbutton' bindtap='goRun' ></view>
+  
+</view>
+
+<view class="fill" wx:if="{{isShowfill}}">
+    <scroll-view scroll-y="true" scroll-x="true" class = "FilePath" bindtouchmove="scroll" bindtouchstart='scroll' bindtouchend='endTou'>
+    <image src='{{src}}' style="width: {{width}}px;height: {{height}}px;" bindtouchmove="touch"></image>
+  </scroll-view>
+</view>

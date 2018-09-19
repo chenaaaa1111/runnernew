@@ -43,21 +43,24 @@ Page({
             userInfo: res.userInfo,
             hasUserInfo: true
           })
-          var jscode = wx.getStorageSync('jscode');
+          var jscode = res.code;
+           wx.setStorageSync('jscode');
           console.log('jscode', jscode);
-          // if (jscode) {
-          //   request.requestLogin({
-          //     'jscode': jscode,
-          //     'name': userInfo.nickName, 'photo': userInfo.avatarUrl
-          //   },function (res) {
-          //     console.log('indexUserInfor',res);
-          //       console.log('sessionid', res.data.data.sessionid);
-          //       var sessionId = res.data.data.sessionid;
-          //     wx.setStorageSync('sessionId',sessionId);
-          //       wx.setStorageSync('token', res.data.data.token)
+          if (jscode) {
+            request.requestLogin({
+              'jscode': jscode,
+              'name': userInfo.nickName, 'photo': userInfo.avatarUrl
+            },function (res) {
+              console.log('indexUserInfor',res);
+                console.log('sessionid', res.data.data.sessionid);
+                var sessionId = res.data.data.sessionid;
+              wx.setStorageSync('sessionId',sessionId);
+                wx.setStorageSync('token', res.data.data.token)
 
-          //     });
-          // }
+              });
+          }else{
+            
+          }
           wx.switchTab({
             url: './../home/home',
           })
@@ -76,20 +79,26 @@ Page({
     // })
     var jscode = wx.getStorageSync('jscode');
     console.log('jscode',jscode);
-    // if (jscode){
+    try{
+      if (jscode) {
+        request.requestLogin({
+          'jscode': jscode,
+          'name': userInfo.nickName, 'photo': userInfo.avatarUrl
+        }, function (res) {
+          console.log('resgetUserInfor', res);
+          console.log('sessionid', res.data.data.sessionid);
+          var sessionId = res.data.data.sessionid;
+          wx.setStorageSync('sessionId', sessionId);
+          wx.setStorageSync('token', res.data.data.token)
 
-    //   request.requestLogin({
-    //     'jscode': jscode,
-    //     'name': userInfo.nickName, 'photo': userInfo.avatarUrl
-    //   },function (res) {
-    //     console.log('resgetUserInfor',res);
-    //       console.log('sessionid', res.data.data.sessionid);
-    //       var sessionId = res.data.data.sessionid;
-    //       wx.setStorageSync('sessionId', sessionId);
-    //       wx.setStorageSync('token', res.data.data.token)
+        });
+      }
 
-    //     });
-    // }
+      
+    }catch(e){
+
+    }
+ 
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true

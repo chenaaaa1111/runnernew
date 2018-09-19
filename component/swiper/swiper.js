@@ -15,8 +15,9 @@ Component({
       '../../images/bannera.png',
       './../../images/bannerb.png'
     ],
-    indicatorDots: false,
-    indicatorDots:true,
+    slider:3,
+    swiperCurrent:0,
+    indicatorDots:false,
     autoplay: true,
     interval: 5000,
     duration: 1000
@@ -42,9 +43,16 @@ Component({
       })
     },
     durationChange: function (e) {
+      
       this.setData({
         duration: e.detail.value
       })
+    },
+    swiperChange:function(e){
+      this.setData({   
+        swiperCurrent: e.detail.current
+    })
+
     }
   }
 })

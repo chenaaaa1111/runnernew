@@ -1,5 +1,5 @@
 <view class='container'>
- <image class='bgi' src='./../../images/forwho/backgrud.png'>  
+ <image class='bgi' src='./../../images/themsItem/bgbg.jpg'>  
     </image>
     <view class="header">
         <view class='left' bindtap='goback'>

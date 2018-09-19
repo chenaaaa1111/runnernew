@@ -72,7 +72,7 @@ Page({
          data: res.encryptedData,
          iv:res.iv
        }
-        request.req.requestRunnerber(sendData, function (res) {//后台揭秘
+        request.req.requestRunnerber(sendData,function (res) {//后台揭秘
           console.log('uuud',res);
 
           var sendData=JSON.parse(res.data.data)

@@ -24,16 +24,16 @@
 			"current": -1,
 			"list": []
 		},
-		"game": {
-			"currentL": -1,
-			"list": []
-		},
 		"plugin": {
 			"current": -1,
 			"list": []
 		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
 		"miniprogram": {
-			"current": -1,
+			"current": 7,
 			"list": [
 				{
 					"id": -1,
@@ -78,9 +78,9 @@
 					"query": ""
 				},
 				{
-					"id": -1,
-					"name": "thems",
-					"pathName": "pages/Thems/thems",
+					"id": 7,
+					"name": "cric",
+					"pathName": "pages/cherish/cherish",
 					"query": ""
 				},
 				{

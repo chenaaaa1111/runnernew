@@ -1,0 +1,87 @@
+/* pages/cherish/cherish.wxss */
+page{
+  height: 100%;
+  width: 100%;
+}
+.container{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  font-size: 0;
+}
+.bg{
+  position: absolute;
+  z-index:-1;
+  height: 100%;
+
+    width: 100%;
+}
+.textbutton{
+width:174rpx;
+height:85rpx;
+margin-top:135%;
+margin-left:38%;
+position:absolute;
+bottom:56rpx;
+
+}
+.pho{
+  position: absolute;
+}
+.fam{
+  width:337rpx;
+  height:300rpx;
+  margin-top:91rpx;
+  margin-left:120rpx;
+
+}
+.imgUp{
+width:100rpx;
+height:100rpx;
+top:91px;
+left:118px;
+position:absolute;
+
+
+}
+
+
+/* component/fillreact/fillreact.wxss */
+.cover-preview{
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+.croper{
+  width: 750rpx;
+  height: 526rpx;
+  position: absolute;
+  top: 400rpx;
+  left: 0;
+  background-color: rgba(135,206,250,0.5);
+}
+ 
+.croper-sure{
+  width: 120rpx;
+  height: 50rpx;
+  border-radius: 10rpx;
+  color: black;
+  background-color: rgba(135,206,250,0.8);
+  font-size: 40rpx;
+  position: absolute;
+  top: 946rpx;
+  right: 10rpx;
+  text-align: center
+}
+.croper-cancel{
+  width: 120rpx;
+  height: 50rpx;
+  border-radius: 10rpx;
+  color: black;
+  background-color: rgba(135,206,250,0.8);
+  font-size: 40rpx;
+  position: absolute;
+  top: 946rpx;
+  right: 150rpx;
+  text-align: center
+}

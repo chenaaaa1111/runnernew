@@ -9,8 +9,13 @@ Page({
   data: {
     chooseItem: [{ text: '事业', bg: './../../images/forwho/1@2x.png' }, { text: '朋友', bg: './../../images/forwho/2@2x.png' }, { text: '健康', bg: './../../images/forwho/3@2x.png' }, { text: '无所事事', bg: './../../images/forwho/4@2x.png' }, { text: '未来', bg: './../../images/forwho/5@2x.png' }, { text: '明天', bg: './../../images/forwho/6@2x.png' }, { text: '没压力', bg: './../../images/forwho/7@2x.png' }, { text: '工作', bg: './../../images/forwho/8@2x.png' }, { text: '幸福', bg: './../../images/forwho/9@2x.png' }, { text: '家人', bg: './../../images/forwho/10@2x.png' }, { text: '爱情', bg: './../../images/forwho/11@2x.png' }, { text: '自定义', bg: './../../images/forwho/12@2x.png' }],
     itemmages: ['./../../images/forwho/1@2x.png'],
-    forwhom:'爱情',
-    name:''
+    forwhom:'未来',
+    name:'',
+    forWhat: '', 
+    foritem:'',
+    zidingyi:false,
+    forwhompld:'请输入',
+    wfocus:false
   },
 
   /**
@@ -19,24 +24,57 @@ Page({
   chooseFom:function(e){
     console.log(e);
     var froms = e.currentTarget.dataset.form;
-    this.setData({ forwhom: froms})
+    this.setData({
+      isselect: true
+    })
+    if (froms == "自定义") {
+      this.setData({
+        zidingyi: !this.data.zidingyi,
+        wfocus:true
+       
+      })
+    }
+    this.setData({
+      forwhom: froms
+    })
+   
+  },
+  getwhom:function(e){
+       console.log(e);
+    console.log('e', e)
+    var froms = e.currentTarget.dataset.form;
+    if (forwhom){
+      this.setData({
+        forwhom: froms
+      })
+    }
+  
   },
   gotoRun:function(e){
     var self=this;
-      wx.navigateTo({
+    var self = this;
+    req.reqaddforwho({
+      'name': '',
+      'smname': self.data.name,
+      'content': ''
+
+    }, function (res) {
+      console.log('forWho', res);
+      wx.redirectTo({
         url: './../runnew/runnew?id=' + self.data.name,
       })
+    })
   },
   addForwho:function(e){
      var self=this;
     req.reqaddforwho({
-      'name':self.data.forwhom,
+      'name':self.data.forwhom||'',
       'smname': self.data.name,
-      'content':'最大'
+      'content': self.data.foritem||''
 
     },function(res){
       console.log('forWho',res);
-      wx.navigateTo({
+      wx.redirectTo({
         url: './../runnew/runnew?id='+self.data.name,
       })
     })
@@ -65,6 +103,14 @@ Page({
    */
   onHide: function () {
   
+  },
+  getItem:function(e){
+      console.log('e',e)
+    var val = e.detail.value;
+
+      this.setData({
+        foritem: val
+      })
   },
 
   /**

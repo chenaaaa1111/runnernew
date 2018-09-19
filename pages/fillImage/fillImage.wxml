@@ -1,0 +1,18 @@
+
+<canvas hidden='{{hide_canvas}}' id='cover-preview' bindtouchstart='canvas_start' bindtouchmove='canvas_move' bindtouchend='canvas_end' disable-scroll='true' canvas-id='cover-preview'>
+    <cover-view catchtap='upload_bg' id='croper-sure'>确定</cover-view>
+    <cover-view catchtap='cancel_croper' id='croper-cancel'>取消</cover-view>
+    <cover-view id='croper'></cover-view>
+ </canvas> 
+<view class="container"   wx:if="{{!isShowfill}}">
+<view class="pho" wx:if="{{!isShowfill}}">
+    <image class='' src='./../../images/chrics/photoreact.png'></image>
+    <image src='./../../images/chrics/family.png' class='fam' wx:if="{{hasUpload}}"></image>
+    <image src='./../../images/chrics/upload.png' class="imgUp" bindtap="change_cover" wx:if="{{!hasUpload}}"></image>
+</view> 
+
+    <image class='bg' wx:if="{{!beforeUp}}" src='http://106.14.153.111:8080/sport/image/beforeup.jpg'></image>
+     <image class='bg' wx:if="{{beforeUp}}" src='http://106.14.153.111:8080/sport/image/uploaded.jpg'></image>
+    <view class='textbutton' bindtap='goRun' ></view>
+  
+</view>

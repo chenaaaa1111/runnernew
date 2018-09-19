@@ -1,21 +1,28 @@
-function request(sendData,url){
-  var sd = sendData.assign({}, { token: "123" }, sendData);
-}
+
 function requestLogin(data,callback){
+  // var 
+  //   url= 'http://yundongkuka.com:8080/sport/user/user';
+  var url ='http://106.14.153.111:8080/sport/user/user';
+  try{
     wx.request({
-      url: 'http://106.14.153.111:8080/sport/user/user',	
+      url:url,
       data: data,
-      method:"GET",
-      success:function(res){
-              console.log(res);
-              callback(res);
+      method: "GET",
+      success: function (res) {
+        console.log(res);
+        callback(res);
 
       }
     })
+  }catch(e){
+    console.error(e)
+  }
+ 
 }
-function request(data, url,callBack,method){
+function request(url,data, callBack,method){
   var token = wx.getStorageSync('token');
-
+  var apiurl = 'http://106.14.153.111:8080';
+  url = apiurl+url;
   var sendData = Object.assign({ token: token},data)
     wx.request({
       url: url,
@@ -29,44 +36,49 @@ function request(data, url,callBack,method){
 }
 
 function requestbaner(sendData,callback,methed){
-  request(sendData, 'http://106.14.153.111:8080/sport/carousel/carousel', callback, methed)
+  //var url = 'http://yundongkuka.com:8080/sport/carousel/carousel';
+  var url = '/sport/carousel/carousel';
+  request(url ,sendData, callback, methed)
 }
 function Req(){
   var self=this;
-  function request(url, data,callback,methd){
-    self.apiurl ='http://106.14.153.111:8080';
+  function request(url, data, callback, methd) {
+    //self.apiurl = 'http://yundongkuka.com:8080';
+    self.apiurl = 'http://106.14.153.111:8080';
+    console.log('url', self.apiurl + url)
     var token = wx.getStorageSync('token');
     var sendData = Object.assign({ 'token': token }, data)
 
-     wx.request({
-        url: self.apiurl+url,
-        data: sendData,
-        header: { 'Cookie': "JSESSIONID=" + wx.getStorageSync('sessionId') },
-          method: 'GET',
-          dataType: 'json',
-          responseType: 'text',
-          success: function(res) {
-            callback(res);
-          },
-          fail: function(res) {},
-          complete: function(res) {},
-        })
-    }
-    function test(){
-      console.log(22);
-    }
+    wx.request({
+      url: self.apiurl + url,
+      data: sendData,
+      header: { 'Cookie': "JSESSIONID=" + wx.getStorageSync('sessionId') },
+      method: 'GET',
+      dataType: 'json',
+      responseType: 'text',
+      success: function (res) {
+        callback(res);
+      },
+      fail: function (res) { },
+      complete: function (res) { },
+    })
+  }
   this.requstImages= function (sendData,callBack){
     request('url',sendData,callBack,"Get");
   }
-  this.requestRunnerber = function (callBack){
+  this.requestRunnerber = function(sdData,callBack){
+    console.log('shushu', sdData);
+    console.log(callBack)
     wx.getWeRunData({
       success:function(res){
         console.log(res);
-        var sendData = {
+        var sea = {
           data: res.encryptedData,
           iv: res.iv
         }
-        request('/sport/pedometer/pedometer', sendData, callBack, "Get");
+        var ssdata = Object.assign(sdData, sea)
+        console.log('获取步数', sdData);
+        request('/sport/pedometer/pedometer', ssdata, callBack, "Get");
       }
     })
     //获取步数
@@ -98,7 +110,14 @@ function Req(){
     //添加套餐
     request('/sport/meal/gorun', sendData, callBack, "Get");
   }
+  this.requestloadImage = function (sendData, callBack){
+    request('/sport/meal/loadsm', sendData, callBack)
+  }
+  this.requestForItem = function (sendData, callBack) {
+    request('/sport/meal/loadsm', sendData, callBack)
+  }
 }
+
 var req = new Req();
  module.exports={
    requestLogin, requestbaner, req

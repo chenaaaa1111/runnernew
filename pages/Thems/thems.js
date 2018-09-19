@@ -26,16 +26,27 @@ Page({
     var name = e.currentTarget.id;
     console.log('*****', e.currentTarget.dataset.canRun);
     if (!e.currentTarget.dataset.ischoose && e.currentTarget.dataset.canrun){
-      req.reqaddImage({ name: e.currentTarget.id},function(res){
-           console.log('res',res);
+      // req.reqaddImage({ name: e.currentTarget.id},function(res){
+      //      console.log('res',res);
+      // })
+      req.requestloadImage({
+        name: e.currentTarget.id
+      },function(res){
+        console.log('status', res.data.data.status);
+        if (res.data.data.status==1){//已经选择过为爱而跑
+         wx.navigateTo({
+           url: './../runnew/runnew?id=' + name,
+          })
+        }else{
+         wx.navigateTo({
+            url: './../forwho/forwho?id=' + name,
+        })
+        }
+       
       })
-      wx.navigateTo({
-        url: './../forwho/forwho?id=' + name,
-      })
+    
     }else{
-      wx.navigateTo({
-        url: './../running/running?id=' + name,
-      })
+      
     }
   
   },

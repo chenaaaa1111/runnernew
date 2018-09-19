@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "fillreact": "./../../component/fillreact/fillreact"
+  }
+
+}

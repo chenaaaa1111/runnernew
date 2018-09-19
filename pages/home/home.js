@@ -8,11 +8,18 @@ Page({
   data: {
     swiperList:[],
     xingzuo:'',
-    shengxiao:''
+    shengxiao:'',
+    indicatorDots: false,
+    hasdot:false
   },
   gotoThems:function(e){
       wx.switchTab({
         url: './../Thems/thems',
+      })
+  },
+  gotocris:function(e){
+      wx.navigateTo({
+        url: './../fillImage/fillImage',
       })
   },
   /**
@@ -20,6 +27,9 @@ Page({
    */
   onLoad: function (options) {
     var self=this;
+    this.setData({
+      hasdot:false
+    })
     requestbaner({},function(res){
         console.log('res',res.data.data);
         var xingzuo = res.data.data['sx'];
@@ -32,14 +42,16 @@ Page({
         for(var i in res.data.data){
             console.log(res.data.data[i]);
         }
-    },'GET')
+    },'GET');
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    
+    
+
   },
 
   /**

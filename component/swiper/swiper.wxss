@@ -23,3 +23,42 @@
 .swiper-box .wx-swiper-dot-active::before{
     background:rgba(244,0,0,0.8);    
 }
+.swiper .swiperBox{
+  height:300rpx;
+
+}
+.swiper-box{
+  height: 300rpx;
+  position: relative;
+}
+
+
+ .dots{
+  position: absolute;
+
+
+  left: 0;
+  right: 0;
+
+  bottom: 20rpx;
+  display: flex;
+  justify-content: center;
+}
+ .dots .dot{
+  margin: 0 8rpx;
+  width: 14rpx;
+  height: 14rpx;
+  background: #fff;
+  border-radius: 8rpx;
+  transition: all .6s;
+}
+
+ .dots .dot.active{
+  width: 24rpx;
+  background: #f80;
+
+}
+.swiperCont{
+  position: relative;
+}
+

@@ -1,11 +1,16 @@
 
 <!--pages/forwho/forwho.wxml-->
+
 <view class='bg'>
     <image class='bgi' src='./../../images/forwho/backgrud.png'>  
     </image>
 
     <view class='header'>
-        今日为 <text class="friend">{{forwhom}}</text> <text class='text2'> 而跑 @ </text><view class='desc'><input placeholder='请输入十字以内' maxlength='10' /></view> 
+        <text class="text2">今日为</text> <text data-id='{{forwhom}}' class="{{isselect? 'friend active' :' friend' }}" wx:if="{{!zidingyi}}">{{forwhom}}</text> 
+         <input wx:if="{{zidingyi}}" focus='{{wfocus}}'  class="sudu" value='{{forwhom}}' placeholder='{{forwhompld}}' bindinput="getwhom"
+          maxlength='5' />
+        <text class='text2'> 而跑 @ </text><view class='desc'><input value='{{foritem}}' bindinput="getItem"
+         placeholder='请输入十字以内' maxlength='10' /></view> 
      
     </view>
     <view class='containerimages'>
@@ -15,21 +20,13 @@
                 </image>
                 <text>{{item.text}}</text>
         </view>
-        <!-- <view class='itemimg middle'>
-                <image src='./../../images/forwho/2@2x.png' class='bgsmall' ></image>
-                 <text>朋友</text>
-        </view>
-        <view class='itemimg'>
-                <image src='./../../images/forwho/3@2x.png' class='bgsmall' ></image>
-               <text>健康</text>  
-        </view> -->
     </view>
     <view class='loucontainer'>
         <view class='louimage'>
-            <image class="leftbig"          src='./../../images/forwho/rounda.png'></image>
+            <image class="leftbig"   src='./../../images/forwho/rounda.png'></image>
         </view>
          <view class='louimage'>
-            <image class="rightimg"         src='./../../images/forwho/speack.png'></image>
+            <image class="rightimg"  src='./../../images/forwho/speack.png'></image>
         </view>
     </view>
     <view  class='loucontainer potell'>
