@@ -81,7 +81,8 @@ Page({
   },
   onLoad: function (options) {
        console.log('options',options);
-    this.setData({ name: options.id})
+    var id = decodeURIComponent(options.id)
+    this.setData({ name: id })
   },
 
   /**

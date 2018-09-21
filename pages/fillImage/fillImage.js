@@ -13,8 +13,23 @@ var bg_url;
 Page({
   data: {
     hide_canvas: true,//绘图层显示控制变量
-    isShowfill:false
-  },  //选择并将图片输出到canvas
+    isShowfill:false,
+    whom: '',
+    item:''
+  },
+  
+  getwhom:function(e){
+       var whom=e.detail.value;
+       this.setData({
+         whom: whom
+       })
+  } ,
+  getItem:function(e){
+    var item = e.detail.value;
+    this.setData({
+      item: item
+    })
+  },
   change_cover: function () {
     var that = this;
     this.setData({
@@ -22,7 +37,7 @@ Page({
     })
     wx.showModal({
       title: '提示',
-      content: '更改我的封面',
+      content: '上传想要缅怀的图片',
       confirmColor: '#39bae8',
       success: function (res) {
         if (res.confirm) {
@@ -112,6 +127,7 @@ Page({
   },
   //确定并上传背景图
   upload_bg: function () {
+    var self=this;
     var that = this;
     var screenWidth = wx.getSystemInfoSync().screenWidth;
     // console.log(screenWidth);
@@ -131,24 +147,36 @@ Page({
         //res.tempFilePath即为生成的图片路径
         console.log('tempFilePath',res.tempFilePath)
         var tempFilePath = res.tempFilePath;
-         //上传
-        //  wx.request({
-        //    url: 'http://106.14.153.111:8080/sport/miss/missnum',
-        //    data:{
-        //      'content':"tian",
-        //      'name':'123',
-        //      'file': res.tempFilePath
-        //    }
-        //  });
+        
          wx.uploadFile({
-           url: 'http://106.14.153.111:8080/sport/miss/missnum',
+           url: 'http://106.14.153.111:8080/sport/miss/upload ',
            filePath: tempFilePath,
            name: 'imgFile',
            header: { 'Cookie': "JSESSIONID=" + wx.getStorageSync('sessionId') },
            formData:{
-             'content': "tian",
-             'name': '123',
+             'content': self.data.whom,
+             'name': self.data.item,
              token: wx.getStorageSync('token')
+           },
+           success:function(res){
+             console.log('data.state',  res.data)
+             var data=JSON.parse(res.data);
+             console.log('data',data);
+             var imgInfro = data.data[0];
+             var id = imgInfro.id;
+             console.log('imgInfor', imgInfro);
+             wx.setStorageSync('imgInfor', imgInfro);
+             var path = imgInfro.path;
+             var name = imgInfro.name;
+             var content = imgInfro.content;
+             if (data.state==200){
+               console.log(data.data);
+               var imgpath = data.data;
+               console.log('imgpath',imgpath);
+               wx.navigateTo({
+                 url: './../runnew/runned/runned?id=' + id + "&path=" + path + "&name=" + name + "&content=" + content,
+               })
+             }
            }
          })
       }

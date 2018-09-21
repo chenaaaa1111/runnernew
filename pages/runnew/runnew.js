@@ -67,19 +67,32 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
+  
+  checkSession: function () {
+    var jscode = wx.getStorageSync('jscode');
+    if (!jscode) {
+      wx.navigateTo({
+        url: '/pages/index/index',
+      })
+    }
+  },
   onLoad: function (options) {
-   
+    console.log('))))))options',options)
+    this.checkSession();
     var num = 0;
     var self = this;
-    request.req.requestForItem({ name: options.id },(res)=>{
+    var id = decodeURIComponent(options.id);
+    request.req.requestForItem({ name: id },(res)=>{
       console.log('为谁而跑',res);
       this.setData({
         forWhat: res.data.data.name,
         forwhom: res.data.data.content
       })
     })
-    request.req.requestImageRun({ smname: options.id }, function (res) {//获取图片信息
-      console.log('图片信息', res.data.data);
+
+    request.req.requestImageRun({ smname: id }, function (res) {//获取图片信息
+      console.log('获取图片请求参数', { smname: id });
+      console.log('图片信息', res);
       var ImageInfor = res.data.data;
       console.log();
       self.setData({
@@ -96,20 +109,16 @@ Page({
       self.setData({
         list: list
       })
-      // request.req.requestRunnerber({ name: options.id, status:1},function (res) {
-      //   console.log('res',res);
-      //   // var todayNum = res.data.data[res.data.data.length - 1].step;//今日总步数
-      //   //var todayNum = 3000;//今日总步数  测试
-      // });
+    
      //获得跑步时的步数
       request.req.requestRunnerber({
-        name: options.id, status: 2
+        name: id, status: 2
       },function(res){
         console.log('获得开始跑步时的步数',res);
       })
      var startStep='';//运动开始时侯的步数
       var dingshi = setInterval(function () {//运动数据
-        request.req.requestRunnerber({ name: options.id, status:1},function(res){
+        request.req.requestRunnerber({ name: id, status:1},function(res){
           console.log('运动数据****',res);
          var runData=res.data.data;
           console.log(runData);

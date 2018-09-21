@@ -6,7 +6,7 @@
     <text >热门推荐</text>
     <text class='second fc999 fs_24' data-val="bm" bindtap='gotoThems'>星座</text>
     <text class='fc999 fs_24' >|</text>
-    <text class='thir fc999 fs_24' bindtap='gotoThems' data-val="sx">生肖</text>
+    <text class='thir fc999 fs_24' bindtap='' data-val="sx">生肖</text>
     <text class='fs_24 fc999' >更多>></text>
 </view>
  

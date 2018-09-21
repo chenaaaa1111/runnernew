@@ -15,6 +15,14 @@ Page({
      url: './../home/home',
    })
   },
+  checkSession:function(){
+    var jscode=wx.getStorageSync('jscode');
+    if(!jscode){
+      wx.navigateTo({
+        url: '/pages/index/index',
+      })
+    }
+  },
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
@@ -29,9 +37,10 @@ Page({
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
       app.userInfoReadyCallback = res => {
-        wx.switchTab({
-          url: './../home/home',
-        })
+        console.log('callbackRes',res);
+        // wx.switchTab({
+        //   url: './../home/home',
+        // })
       }
     } else {
       // 在没有 open-type=getUserInfo 版本的兼容处理
@@ -46,21 +55,6 @@ Page({
           var jscode = res.code;
            wx.setStorageSync('jscode');
           console.log('jscode', jscode);
-          if (jscode) {
-            request.requestLogin({
-              'jscode': jscode,
-              'name': userInfo.nickName, 'photo': userInfo.avatarUrl
-            },function (res) {
-              console.log('indexUserInfor',res);
-                console.log('sessionid', res.data.data.sessionid);
-                var sessionId = res.data.data.sessionid;
-              wx.setStorageSync('sessionId',sessionId);
-                wx.setStorageSync('token', res.data.data.token)
-
-              });
-          }else{
-            
-          }
           wx.switchTab({
             url: './../home/home',
           })
@@ -72,11 +66,6 @@ Page({
     console.log(e)
     var userInfo = e.detail.userInfo;
     app.globalData.userInfo = e.detail.userInfo;
-    // wx.login({
-    //   success:function(res){
-    //       console.log('第一次登陆',res);
-    //   }
-    // })
     var jscode = wx.getStorageSync('jscode');
     console.log('jscode',jscode);
     try{
@@ -92,9 +81,7 @@ Page({
           wx.setStorageSync('token', res.data.data.token)
 
         });
-      }
-
-      
+      }   
     }catch(e){
 
     }

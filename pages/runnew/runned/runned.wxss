@@ -1,0 +1,203 @@
+/* pages/runnew/runned/runned.wxss */
+page{
+  width: 100%;
+  height: 100%;
+}
+.upContainer{
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+.downcontainer{
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.bg{
+  height: 100%;
+  width: 100%;
+}
+.upContainer{
+  height: 50%;
+}
+.downcontainer{
+  height: 50%;
+}
+.s1{
+  width: 91rpx;
+  height: 84rpx;
+  border-radius: 50%;
+  background:url("http://106.14.153.111:8080/sport/image/bubble1.png") no-repeat ;
+  position: absolute;
+   top: 49rpx;
+   left:234rpx;
+  background-size: 100%;
+  background-position: 100% 100%;
+}
+.s2{
+  width: 130rpx;
+  height: 118rpx;
+  border-radius: 50%;
+    position: absolute;
+   left: 377rpx;
+  top:0rpx;
+  
+  background:url("http://106.14.153.111:8080/sport/image/bubble2.png") no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+.s3{
+  width: 92rpx;
+  height: 92rpx;
+  border-radius: 50%;
+    position: absolute;
+   left: 90rpx;
+  top:221rpx;
+  background:url("http://106.14.153.111:8080/sport/image/bubble3.png") no-repeat ;
+  background-size: 100%;
+  background-position: 100% 100%;
+}
+.s4{
+  width: 150rpx;
+  height: 133rpx;
+  border-radius: 50%;
+    position: absolute;
+  left:210rpx;
+   top:167rpx;
+  background:url("http://106.14.153.111:8080/sport/image/bubble4.png") no-repeat ;
+   background-size: 100%;
+  background-position: 100% 100%;
+}
+.s5{
+  width: 123rpx;
+  height: 110rpx;
+  border-radius: 50%;
+    position: absolute;
+  left:399rpx;
+   top:173rpx;
+  background:url("http://106.14.153.111:8080/sport/image/bubble5.png") no-repeat;
+   background-size: 100%;
+  background-position: 100% 100%;
+}
+.im1{
+  border-radius: 50%;
+  max-width: 100%;
+  width: 80rpx;
+  height: 80rpx;
+}
+.im2{
+  border-radius: 50%;
+  max-width: 100%;
+  width: 130rpx;
+  height: 118rpx;
+}
+
+/* pages/running/running.wxss */
+.runningImage{
+   height: 690rpx;
+   width: 690rpx;
+   border: none;
+}
+.none{
+  display:block; 
+}
+.canvas{
+  position: absolute;
+  top: 0rpx;
+  left: 29rpx;
+  width:690rpx;
+  height: 690rpx;
+  border:none;
+}
+.imgContainer{
+  text-align: center;
+   padding-left: 30rpx;
+  padding-right: 30rpx;
+  border: none;
+  font-size: 0;
+  height: 690rpx;
+}
+.textContainer{
+  padding-left: 50rpx;
+  color: #666;
+  display:flex;
+
+}
+.imass{
+  width: 300rpx;
+  height:300rpx;
+}
+ .right{
+  position: absolute;
+  right: 60rpx;
+}
+.number{
+  position: absolute;
+  left: 40rpx;
+  top: 60rpx;
+   font-size: 40rpx;
+  color: #fff;
+}
+.numberright{
+  right:47rpx;
+  top: 60rpx;
+  position: absolute;
+}
+.tNuber{
+  margin-top: 40rpx;
+  font-size: 40rpx;
+  color: #fff;
+}
+.runnumber{
+  font-size: 40rpx;
+  color: #fff;
+}
+.baposition{
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 1374rpx;
+}
+.textform{
+  width: 300rpx;
+  height: 80rpx;
+}
+.bottomView{
+  margin-top: 330rpx;
+  padding-left:50rpx;
+}
+.textimage{
+  margin-left:30rpx;
+}
+#canvasbg{
+  width: 690rpx;
+  height: 690rpx;
+  position: relative;
+}
+.flima{
+  position: absolute;
+}
+.runcontain{
+  margin-top:20rpx;
+padding-left:85rpx;
+padding-right:81rpx;
+
+
+}
+.message{
+  height: 200rpx;
+}
+.title{
+  padding-left: 45rpx;
+  font-size: 40rpx;
+  color: #333;padding-top:30rpx;
+  padding-bottom: 30rpx;
+}
+.content{
+  padding-left: 125rpx;
+
+}
+.flima{
+  width: 300rpx;
+  height: 240rpx;
+}

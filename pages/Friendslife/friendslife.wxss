@@ -71,9 +71,10 @@ page,.body{
  
 }
 .dropimage{
-  height:19rpx;
+  height:30rpx;
   width:30rpx;
-  margin-bottom:4px;
+  margin-bottom:0px;
+
 
 }
 .ctainer{

@@ -116,6 +116,28 @@ function Req(){
   this.requestForItem = function (sendData, callBack) {
     request('/sport/meal/loadsm', sendData, callBack)
   }
+  //获取缅怀主题步数
+  this.reqmisRunStep = function (sdData, callBack) {
+    console.log('shushu', sdData);
+    console.log(callBack)
+    wx.getWeRunData({
+      success: function (res) {
+        console.log(res);
+        var sea = {
+          data: res.encryptedData,
+          iv: res.iv
+        }
+        var ssdata = Object.assign(sdData, sea)
+        console.log('获取步数', sdData);
+        request('/sport/miss/step', ssdata, callBack, "Get");
+      }
+    })
+    //获取步数
+
+  }
+  this.reqmissum = function (sendData, callBack) {
+    request('/sport/miss/missnum', sendData, callBack)
+  }
 }
 
 var req = new Req();

@@ -17,8 +17,8 @@
         </view>   
     </view>
     <view class='content'>
-        <view class='cardContent' wx:for="{{dataList}}"  wx:key="{{index}}" >
-           <view class='card' wx:for="{{item}}" bindtap='goTorun' id="{{item.name}}" data-isChoose="{{isChoose}}"
+        <view class='cardContent' wx:for="{{dataList}}"  wx:key="{{item.name}}" >
+           <view class='card' wx:for="{{item}}" bindtap='goTorun' id="{{item.name}}"   data-isChoose="{{isChoose}}" wx:key="{{index}}"
            data-canRun="{{canRun}}"
           style="background-image:url('{{item.dashedpath}}')"> 
                 <view class='level' >

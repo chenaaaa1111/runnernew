@@ -18,14 +18,41 @@ Page({
       })
   },
   gotocris:function(e){
+    var sendData={};
+    req.reqmissum(sendData,res=>{
+        console.log('res',res);
+        if(res.data.data.length>0){
+            var imgInfro=res.data.data[0];
+          var id = imgInfro.id;
+            console.log('imgInfor',imgInfro);
+          wx.setStorageSync('imgInfor', imgInfro);
+          var path = imgInfro.path;
+          var name = imgInfro.name;
+          var content = imgInfro.content;
+          wx.navigateTo({
+            url: './../runnew/runned/runned?id=' + id + "&path=" + path + "&name=" + name + "&content=" + content,
+          })
+        }else{
+          wx.navigateTo({
+            url: './../fillImage/fillImage',
+          })
+        }
+    })
+   
+  },
+  checkSession: function () {
+    var jscode = wx.getStorageSync('jscode');
+    if (!jscode) {
       wx.navigateTo({
-        url: './../fillImage/fillImage',
+        url: '/pages/index/index',
       })
+    }
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.checkSession()
     var self=this;
     this.setData({
       hasdot:false

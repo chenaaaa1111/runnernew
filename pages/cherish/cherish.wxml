@@ -1,5 +1,8 @@
 <view class="container"   wx:if="{{!isShowfill}}">
 <view class="pho">
+<view>
+   
+</view>
     <image class='' src='./../../images/chrics/photoreact.png'></image>
     <image src='./../../images/chrics/family.png' class='fam' wx:if="{{hasUpload}}"></image>
     <image src='./../../images/chrics/upload.png' class="imgUp" bindtap="chooseImageTap" wx:if="{{!hasUpload}}"></image>

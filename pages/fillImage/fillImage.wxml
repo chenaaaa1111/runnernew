@@ -4,15 +4,23 @@
     <cover-view catchtap='cancel_croper' id='croper-cancel'>取消</cover-view>
     <cover-view id='croper'></cover-view>
  </canvas> 
-<view class="container"   wx:if="{{!isShowfill}}">
+<view class="container" style='background-image:url("http://106.14.153.111:8080/sport/image/uploaded.jpg")'   wx:if="{{!isShowfill}}">
+    <view class='header'>
+        <text class="text2">今日为</text> 
+         <input  focus='{{wfocus}}'   class="sudu" value='{{forwhom}}' placeholder='请输入...' bindinput="getwhom"
+          maxlength='5' />
+        <text class='text2'> 而跑 </text><text class="five">（五个字符以内）</text>
+        <view class='desc'><text class='text5'>我想说：</text><input value='{{foritem}}' bindinput="getItem" class='thirty'
+         placeholder='请输入30个字符以内' maxlength='30' />
+         </view> 
+</view>
 <view class="pho" wx:if="{{!isShowfill}}">
-    <image class='' src='./../../images/chrics/photoreact.png'></image>
+    <image class='phimg' src='./../../images/chrics/photoreact.png'></image>
     <image src='./../../images/chrics/family.png' class='fam' wx:if="{{hasUpload}}"></image>
     <image src='./../../images/chrics/upload.png' class="imgUp" bindtap="change_cover" wx:if="{{!hasUpload}}"></image>
 </view> 
-
-    <image class='bg' wx:if="{{!beforeUp}}" src='http://106.14.153.111:8080/sport/image/beforeup.jpg'></image>
-     <image class='bg' wx:if="{{beforeUp}}" src='http://106.14.153.111:8080/sport/image/uploaded.jpg'></image>
+    <!-- <image class='bg' wx:if="{{!beforeUp}}" src='http://106.14.153.111:8080/sport/image/beforeup.jpg'></image> -->
+     <!-- <image class='bg' wx:if="{{beforeUp}}" src=''></image> -->
     <view class='textbutton' bindtap='goRun' ></view>
   
 </view>
