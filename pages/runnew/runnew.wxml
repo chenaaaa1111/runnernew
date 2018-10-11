@@ -4,45 +4,19 @@
 </view>
 <view class='imgContainer'>
     <image class='runningImage'
-src='{{dashedpath}}'></image> 
+src='{{isfinish?path:dashedpath}}'></image> 
     <canvas canvas-id="myCanvas" class='canvas'  style='border:none' />
 </view> 
-<view class='textContainer'>
-    <view class="them">今日我为{{forWhat}}而跑</view>
+  <view class='textContainer'>
+    <view class="them">今日我为{{forWhat}}而跑       </view>
     <view class='for'>@</view>
     <view class='themafter'>{{forwhom||'青春无悔'}}</view>
-</view>
-<view class='runcontain'>
-    <view class='flima'>
-        <image src="./../../images/running/runleft.png" class='imass ileft'></image>
-        <view class='number'>
-             <view class='runnumber'>
-              {{todayNum}}
-              </view>
-              <view class='tNuber'>
-                今日步数
-              </view>
-        </view>
-          
-    </view>
-  </view> 
- <view class='flima right'>
-        <image src="./../../images/running/runright.png" class='imass iright'></image>
-         <view class='numberright'>
-            <view class='runnumber'>
-              下一目标
-            </view>
-            <view class='tNuber'>
-                -{{golNumber}}
-            </view>
-       </view>
-</view>
-
-<!-- <view class='bottomView'>
-    <image class='textform' src='./../../images/running/forwho.png'></image>
-   <image class="textform textimage" src='./../../images/running/callAloud.png'></image>
-
-</view> -->
+    <image wx:if="{{showNum}}" src="./../../images/weiCode.jpg" class='weiCode'>
+     </image>
+   </view>
+   <view class="runDiv">
+        <showNumber words="{{words}}" isrunnerd="{{isrunnerd}}"  date="{{date}}" name="{{name}}"  todayNum="{{todayNum}}" golNumber="{{golNumber}}" bindstartRun="startRun" ></showNumber>
+   </view>
 <image src='./../../images/running/background.jpg' class='baposition'>
 
 </image>

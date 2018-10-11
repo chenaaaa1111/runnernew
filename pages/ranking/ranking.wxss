@@ -1,9 +1,9 @@
+/* pages/Friendslife/friendslife.wxss */
 /* pages/ranking/ranking.wxss */
 .container{
   padding: 10rpx;
-  padding-bottom: 0rpx;
-  padding-left: 20rpx;
   background: #fff;
+  height: 100%;
 }
 .rankContainer{
   display: flex;
@@ -32,15 +32,14 @@
 .nameText{
   width: 170rpx;
   font-size: 30rpx;
- 
+  word-wrap: normal;
+  text-overflow: ellipsis;
+  overflow: hidden;
+ white-space: nowrap;
 }
 .images{
   width: 327rpx;
-  /* text-overflow: ellipsis;
- 
-display: -webkit-box;
--webkit-line-clamp: 1;
--webkit-box-orient: vertical; */
+
 overflow: hidden;
 }
 .smalltx{
@@ -54,14 +53,11 @@ overflow: hidden;
   color: #09bb07;
 }
 page,.body{
-  background: #f5f5f5;
-  padding-bottom: 20rpx;
+  padding-bottom: 40rpx;
   height: 100%;
 }
 .message{
   text-align: center;
-  margin-top: 30rpx;
-  border-top: 1px dashed #000;
   height: 60rpx;
   line-height: 60rpx;
   font-size: 24rpx;
@@ -69,9 +65,91 @@ page,.body{
   margin-left: 50rpx;
   margin-right: 50rpx;
 }
-
-.boderbtom{
+.bottom{
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  box-shadow: 10rpx 80rpx 60rpx #ccc;
 }
-.nobottom{
-  border-bottom: none;
+.bottom img{
+ 
+}
+.dropimage{
+  height:30rpx;
+  width:30rpx;
+  margin-bottom:0px;
+
+
+}
+.ctainer{
+  display: flex;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 40rpx;
+} 
+.cner{
+  margin-top: 10px;
+  background:#fff;
+}
+.right{
+  margin-right: 20rpx;
+}
+.right image{
+  max-width: 100%;
+}
+.descimages{
+
+}
+.friendimage{
+  width: 568rpx;
+}
+.name{
+  padding-top:24rpx;
+  font-size: 32rpx;
+  color: #576B99;
+}
+.rename{
+   font-size: 32rpx;
+  color: #576B99;
+  margin-right: 20rpx;
+}
+.imageview{
+  padding-top:25rpx;
+}
+.descm{
+  padding-bottom: 20rpx;
+  padding-top: 20rpx;
+  font-size: 28rpx;
+}
+.pubtime{
+  font-size: 20rpx;
+  color: #999;
+  margin-top:20rpx;
+}
+.comment{
+  padding-left: 40rpx;
+  padding-right: 80rpx;
+  padding-top:20rpx;
+}
+.desc{
+  font-size: 26rpx;
+}
+.comItem text{
+  font-size: 26rpx;
+}
+.reward{
+  margin-right: 20rpx;
+}
+.more{
+    color: #576B99;
+    padding-bottom: 20rpx;
+    padding-top: 20rpx;
+}
+.cner{
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0rpx;
+}
+.respect{
+  text-align: center;
 }

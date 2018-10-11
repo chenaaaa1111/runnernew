@@ -19,3 +19,26 @@
 .usermotto {
   margin-top: 200px;
 }
+.getmebutton {
+  color: #fff;
+   margin-top:578rpx;
+   width:500rpx;
+   height: 88rpx;
+   line-height: 88rpx;
+   border-radius: 20rpx;
+   background: rgba(0,0,0, 1);
+   box-shadow: 5rpx 5rpx 30rpx #454545;
+}
+.bg{
+  width: 100%;
+  height: 100%;
+}
+.container{
+  width:100%;
+  height: 100%;
+  background: url('https://ishzi.cn/sport/image/905271855158452573.jpg') no-repeat center center;
+  background-size: cover;
+}
+page{
+  width: 100%;height: 100%;
+}

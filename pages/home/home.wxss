@@ -33,12 +33,16 @@
 }
 .bottomimage{
   width: 100%;
+  height: 542rpx;
 }
 .runnavigator{
   height: 350rpx;
 }
 .imgContainer{
   font-size: 0;
+}
+.wodCap{
+  height: 542rpx;
 }
 
 @font-face {font-family: "iconfont";

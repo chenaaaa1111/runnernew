@@ -70,7 +70,7 @@
 }
 .numberright{
   right: 80rpx;
-  top: 60rpx;
+  top: 24rpx;
   position: absolute;
 }
 .tNuber{

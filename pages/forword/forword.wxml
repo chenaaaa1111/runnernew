@@ -1,0 +1,12 @@
+<view class='bg'>
+<citiesfilter wx:if="{{choose}}" cityLis="{{cityLis}}" bindchooseCity="chooseCity"  ></citiesfilter>
+<view class='imgcontainer' style='background:{{choose?"#fff":"none"}}' wx:if="{{!chooseCity}}">
+     <image wx:if="{{!chooseCity}}"  src='./../../images/forword/choose.png' bindtap='tgchoose' class='choose'></image>
+</view>
+   <view class='title' wx:if="{{chooseCity}}">{{countryName }}·{{cityName}}</view>
+    <view class='bottom'>
+        <image src='./../../images/forword/sure.png' bindtap='gotoworld' class='sure'></image>
+        <image src='./../../images/forword/cance.png ' bindtap='backhome' class='cance'></image>
+    </view>
+    <view class='menban' wx:if="{{showmenban}}"></view>
+</view>

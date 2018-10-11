@@ -1,4 +1,5 @@
 {
+    "navigationBarTitleText": "运动酷咖",
   "usingComponents": {
     "fillreact": "./../../component/fillreact/fillreact"
   }

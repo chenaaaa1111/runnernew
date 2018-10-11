@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "运动酷咖",
+    "usingComponents": {
+      "citiesfilter":"./../../component/citiesfilter/citiesfilter"
+    }
+
+}

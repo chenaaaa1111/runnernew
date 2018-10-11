@@ -1,0 +1,52 @@
+<!--pages/running/running.wxml-->
+<view>
+    <image src='./../../images/forwho/forwhom.png' class='topFont'></image>
+</view>
+<view class='imgContainer'>
+    <image class='runningImage'
+src='{{imgPath}}'  style="opacity:{{opacity}}"></image> 
+</view> 
+<view class='btbg'>
+    <view class='textContainer'>
+    <image src="./../../images/weiCode.jpg" class='weiCode'>
+     </image>
+</view>
+<view class='runcontain'>
+     <showNumberm  words="{{words}}" isrunnerd="{{isrunnerd}}" bindchangeTime="{{changeTime}}" bindcomit="comit"  date="{{date}}" name="{{id}}"  todayNum="{{imgmany}}" golNumber="{{golNumber}}" bindstartRun="startRun" ></showNumberm>
+    <!-- <view class='flima'>
+        <image src="./../../images/running/runleft.png" class='imass ileft'></image>
+        <view class='number'>
+             <view class='runnumber'>
+              {{imgmany}}
+              </view>
+              <view class='tNuber'>
+                开始跑步
+              </view>
+        </view>
+          
+    </view>
+     <view class='flima right'>
+        <image src="./../../images/running/runright.png" class='imass iright'></image>
+         <view class='numberright'>
+            <view class='runnumber'>
+              下一目标
+            </view>
+            <view class='tNuber'>
+                {{golNumber}}
+            </view>
+       </view>
+    </view> -->
+  </view> 
+
+
+</view>
+
+
+<!-- <view class='bottomView'>
+    <image class='textform' src='./../../images/running/forwho.png'></image>
+   <image class="textform textimage" src='./../../images/running/callAloud.png'></image>
+
+</view> -->
+<!-- <image src='./../../images/running/background.jpg' class='baposition'>
+
+</image> -->

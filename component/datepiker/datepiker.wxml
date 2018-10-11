@@ -1,0 +1,7 @@
+<view class="section">
+  <picker mode="date" value="{{date}}" start="1900-09-01" end="2100-09-01" bindchange="Change">
+    <view class="picker">
+      {{date}}
+    </view>
+  </picker>
+</view>

@@ -1,1 +1,7 @@
-{}
+{
+  "navigationBarTitleText": "运动酷咖",
+  "usingComponents": {
+    "showNumber": "./../../../component/showNumbermianhuai/showNumbermianhuai"
+  }
+
+}

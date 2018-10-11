@@ -1,0 +1,9 @@
+<view class='cityContainer'>
+    <view class='country' wx:for="{{cityLis}}" > 
+        <view class='countryitem' > {{item.countryname}} : </view>
+         <view class='cityItem'>
+         <text data-coutryName="{{item.countryname}}" data-cityName="{{it.cityname}}" wx:for="{{item. citylist}}" wx:for-index="in" wx:for-item="it" class="{{activeId==it.cityid?'active':''}}" id='{{it.cityid}}' bindtap='gotocities' >  {{it.cityname}}</text>
+         </view>
+         
+    </view>
+</view>

@@ -25,7 +25,7 @@
   position: relative;
   display: flex;
   padding-top: 20rpx;
-  padding-left: 60rpx;
+  padding-left: 37rpx;
   padding-right:38rpx;
   color: #fff;
 
@@ -73,7 +73,8 @@
 }
 .esaydropdow{
   position:absolute;
-
+  top:25rpx;
+  right: 7rpx;
 }
 .esaydropdow,.esaydropup{
       right:-2rpx;

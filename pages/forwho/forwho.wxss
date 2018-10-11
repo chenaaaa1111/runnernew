@@ -1,4 +1,9 @@
 /* pages/forwho/forwho.wxss */
+.bg{
+  padding-bottom:206rpx;
+  background: url('http://47.101.136.23:8080/sport/image/382835931335188153.jpg') no-repeat center center;
+  background-size: cover;
+}
 .bgi{
   position: absolute;
   width: 100%;
@@ -22,13 +27,17 @@
   margin-top:40rpx;
   font-size: 30rpx;
 }
+.itemimg text{
+    z-index: 20;
+    position: relative;
+}
 .bgsmall{
   width: 196rpx;
   height: 90rpx;
   position: absolute;
   top: 0;
-  z-index: -1;
-  left: 0;
+  z-index: 0;
+  left: 2rpx;
 }
 .header{
     font-size: 36rpx;
@@ -104,6 +113,7 @@
   margin-left: 10rpx;
   vertical-align: middle;
   font-weight: 900;
+  width: 30rpx;
 }
 .text2{
   vertical-align:middle;

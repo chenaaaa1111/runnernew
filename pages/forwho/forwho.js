@@ -9,7 +9,7 @@ Page({
   data: {
     chooseItem: [{ text: '事业', bg: './../../images/forwho/1@2x.png' }, { text: '朋友', bg: './../../images/forwho/2@2x.png' }, { text: '健康', bg: './../../images/forwho/3@2x.png' }, { text: '无所事事', bg: './../../images/forwho/4@2x.png' }, { text: '未来', bg: './../../images/forwho/5@2x.png' }, { text: '明天', bg: './../../images/forwho/6@2x.png' }, { text: '没压力', bg: './../../images/forwho/7@2x.png' }, { text: '工作', bg: './../../images/forwho/8@2x.png' }, { text: '幸福', bg: './../../images/forwho/9@2x.png' }, { text: '家人', bg: './../../images/forwho/10@2x.png' }, { text: '爱情', bg: './../../images/forwho/11@2x.png' }, { text: '自定义', bg: './../../images/forwho/12@2x.png' }],
     itemmages: ['./../../images/forwho/1@2x.png'],
-    forwhom:'未来',
+    forwhom:'事业',
     name:'',
     forWhat: '', 
     foritem:'',
@@ -40,10 +40,10 @@ Page({
    
   },
   getwhom:function(e){
-       console.log(e);
-    console.log('e', e)
-    var froms = e.currentTarget.dataset.form;
-    if (forwhom){
+    //    console.log(e);
+    // console.log('e', e)
+    var froms = e.detail.value;
+    if (froms){
       this.setData({
         forwhom: froms
       })
@@ -67,10 +67,11 @@ Page({
   },
   addForwho:function(e){
      var self=this;
+    console.log(self.data.forwhom);
     req.reqaddforwho({
-      'name':self.data.forwhom||'',
+      'name': self.data.forwhom||'青春',
       'smname': self.data.name,
-      'content': self.data.foritem||''
+      'content': self.data.foritem||'青春无悔'
 
     },function(res){
       console.log('forWho',res);
@@ -139,6 +140,9 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+    return {
+      title: '运动酷咖',
+      path: '/pages/index/index?positionId=' + true  // 当打开分享链接的时候跳转到小程序首页，并设置参数positionId
+    }
   }
 })

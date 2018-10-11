@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -12,7 +12,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.0.4",
-	"appid": "wx9317b47037473512",
+	"appid": "wx8c331f723ffef038",
 	"projectname": "runnersvn",
 	"isGameTourist": false,
 	"condition": {
@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 8,
+			"current": 16,
 			"list": [
 				{
 					"id": -1,
@@ -106,6 +106,36 @@
 					"name": "paopao",
 					"pathName": "pages/runnew/runned/runned",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "friedly",
+					"pathName": "pages/Friendslife/friendslife",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "forword",
+					"pathName": "pages/forword/forword",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "世界二炮",
+					"pathName": "pages/runnerword/runnerword",
+					"query": ""
+				},
+				{
+					"id": 15,
+					"name": "forword",
+					"pathName": "pages/forword/forword",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "扫码",
+					"pathName": "pages/home/home",
+					"scene": "1025"
 				}
 			]
 		}

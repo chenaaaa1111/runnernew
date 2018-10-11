@@ -1,0 +1,160 @@
+/* component/showNumber/showNumber.wxss */
+.for{
+ padding-left:-8rpx;
+color:#546862;
+font-size: 40rpx;
+width:25rpx;
+text-align:center;
+padding-top:40rpx;
+
+}
+.flima{
+  position: absolute;
+}
+.them{
+ font-size:40rpx;
+color:#546862;
+font-weight:900;
+height:57rpx;
+line-height:57rpx;
+display:block;
+font-style: italic;
+max-width:442rpx;
+font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+}
+.themafter{
+  padding-left:20rpx;
+  font-size:40rpx;
+  color:#546862;
+  width:225rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  word-break:normal;
+  text-align:left;
+  padding-top:80rpx;
+
+}
+.runcontain{
+  display: flex;
+  position: relative;
+  padding-left: 45rpx;
+  margin-top: 70rpx;
+  font-weight: 900;
+}
+.imass{
+ width:300rpx;
+height:150rpx;
+
+}
+ .right{
+  position: absolute;
+  right: 27rpx;
+  font-weight: 900;
+}
+.number{
+  position: absolute;
+  left: 25rpx;
+  top: 21rpx;
+   font-size: 34rpx;
+  color: #666;
+}
+.numberright{
+  right: 30rpx;
+  top: 23rpx;
+  position: absolute;
+}
+.tNuber{
+  margin-top: 7rpx;
+  font-size: 40rpx;
+  color: #666;
+}
+.runnumber{
+  font-size: 40rpx;
+  color: #666;
+}
+.runnumb{
+color:#666;
+position:relative;
+top:20rpx;
+width:-14px;
+font-size:25rpx;
+right:-11px;
+z-index:999;
+
+}
+.qianming{
+ /* padding-left:31rpx; */
+ margin-top:24rpx;
+ font-size:30rpx;
+ color:#000;
+text-align: center;
+
+}
+
+.textform{
+  width: 300rpx;
+  height: 80rpx;
+}
+.bottomView{
+  margin-top: 330rpx;
+  padding-left:50rpx;
+}
+.topFont{
+  width: 671rpx;
+  height: 40rpx;
+  margin-left:36rpx;
+  margin-top: 20rpx;
+  margin-bottom:4rpx;
+}
+.ileft{
+  margin-left: -15rpx;
+
+}
+.iright{
+  margin-right: 0rpx;
+}
+.weiCode{
+ position:absolute;
+width:170rpx;
+height:170rpx;
+top:89rpx;
+left:19rpx;
+}
+.startRun{
+  text-align: center;
+
+}
+.start{
+  width: 690rpx;
+  height: 88rpx;
+  margin-left:22rpx;
+  margin-top:18rpx; 
+}
+.btNum{
+  position:absolute;
+  width:100%;
+  bottom:156rpx;
+  left:-14rpx;
+
+}
+.comp{
+  top: -122rpx;
+}
+.imessage{
+ width:352rpx;
+height:231rpx;
+position:absolute;
+right:-28rpx;
+top:-69rpx;
+
+}
+.dataview{
+ position:absolute;
+top:-22rpx;
+left:102rpx;   
+}
+.imgContainer{
+  position: absolute;
+  left:-22rpx;
+
+}

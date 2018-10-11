@@ -1,0 +1,6 @@
+<!--pages/startpage/startpage.wxml-->
+<view class='container'>
+    <image class='bg' src='./../../images/startpage/start.jpg'>
+    </image>
+    <button ></button>
+</view>

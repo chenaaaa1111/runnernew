@@ -2,7 +2,7 @@
 function requestLogin(data,callback){
   // var 
   //   url= 'http://yundongkuka.com:8080/sport/user/user';
-  var url ='http://106.14.153.111:8080/sport/user/user';
+  var url ='https://ishzi.cn/sport/user/user';
   try{
     wx.request({
       url:url,
@@ -21,13 +21,24 @@ function requestLogin(data,callback){
 }
 function request(url,data, callBack,method){
   var token = wx.getStorageSync('token');
-  var apiurl = 'http://106.14.153.111:8080';
+  console.log('requesttoken', token);
+  if (!token){
+    // wx.login({
+    //   success:function(res){ 
+
+    //   }
+    // })
+
+  }
+  var apiurl = 'https://ishzi.cn';
   url = apiurl+url;
   var sendData = Object.assign({ token: token},data)
     wx.request({
       url: url,
       data: sendData,
-      header: { 'Cookie': "JSESSIONID="+wx.getStorageSync('sessionId') },
+      header: { 'Cookie': "JSESSIONID="+wx.getStorageSync('sessionId'),
+        'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
+       },
       method:method,
       success:function(res){
         callBack(res);
@@ -44,15 +55,25 @@ function Req(){
   var self=this;
   function request(url, data, callback, methd) {
     //self.apiurl = 'http://yundongkuka.com:8080';
-    self.apiurl = 'http://106.14.153.111:8080';
+    self.apiurl = 'https://ishzi.cn';
     console.log('url', self.apiurl + url)
     var token = wx.getStorageSync('token');
+    console.log('token', token);
+    if (!token){
+      return;
+    }
+    console.log('token', token)
+    if (!token){
+      return;
+    }
     var sendData = Object.assign({ 'token': token }, data)
 
     wx.request({
       url: self.apiurl + url,
       data: sendData,
-      header: { 'Cookie': "JSESSIONID=" + wx.getStorageSync('sessionId') },
+      header: { 'Cookie': "JSESSIONID=" + wx.getStorageSync('sessionId') ,
+        'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
+      },
       method: 'GET',
       dataType: 'json',
       responseType: 'text',
@@ -137,6 +158,33 @@ function Req(){
   }
   this.reqmissum = function (sendData, callBack) {
     request('/sport/miss/missnum', sendData, callBack)
+  }
+  this.requestFriedLife = function (sendData, callBack){
+    request('/sport/master/selectmaster', sendData, callBack)
+  }
+  this.requestRanking=function(sendData,callBack){
+    request('/sport/rank/rank', sendData, callBack)
+  }
+  this.reqcitys = function (sendData, callBack) {
+    request('/sport/world/country', sendData, callBack)
+  }
+  this.reqcityImages = function (sendData, callBack) {
+    request('/sport/world/cityimg', sendData, callBack)
+  }
+  this.reqwordstep = function (sendData, callBack) {
+    request('/sport/world/step', sendData, callBack)
+  }
+  this.reqaddwordimage = function (sendData, callBack) {
+    request('/sport/world/addimg', sendData, callBack)
+  }
+  this.reqsendMesage = function (sendData, callBack) {
+    request('/sport/meal/addwords', sendData, callBack)
+  }
+  this.reqsendmissMessage = function (sendData, callBack) {
+    request('/sport/miss/addwords', sendData, callBack)
+  }
+  this.reqsendwordMessage = function (sendData, callBack) {
+    request('/sport/world/addwords', sendData, callBack)
   }
 }
 

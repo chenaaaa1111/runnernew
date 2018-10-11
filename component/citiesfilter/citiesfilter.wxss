@@ -1,0 +1,38 @@
+/* component/citiesfilter/citiesfilter.wxss */
+.cityContainer{
+  background: #fff;
+  padding-bottom: 40rpx;
+  font-size: 24rpx;
+}
+.country{
+  text-align: left;
+  padding-left: 20rpx;
+  padding-top: 20rpx;
+  display:flex;
+  font-size: 24rpx;
+
+}
+.country view{
+  display: inline-block;
+  
+}
+.country text{
+  text-align: left;
+  padding-left: 20rpx;
+  padding-top: 20rpx;
+  color: #999;
+   vertical-align: top;
+  display: inline-block;
+}
+.countryitem{
+  white-space:nowrap;
+}
+.cityItem{
+   flex: 1;
+  line-height: 40rpx;
+  margin-top:-20rpx;
+  padding-right: 23rpx;
+}
+.country text.active{
+  color: #333;
+}

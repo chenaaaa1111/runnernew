@@ -127,6 +127,9 @@ Page({
   },
   //确定并上传背景图
   upload_bg: function () {
+    wx.showLoading({
+      title: '上传中，请稍后'
+    })
     var self=this;
     var that = this;
     var screenWidth = wx.getSystemInfoSync().screenWidth;
@@ -149,7 +152,7 @@ Page({
         var tempFilePath = res.tempFilePath;
         
          wx.uploadFile({
-           url: 'http://106.14.153.111:8080/sport/miss/upload ',
+           url: 'https://ishzi.cn/sport/miss/upload',
            filePath: tempFilePath,
            name: 'imgFile',
            header: { 'Cookie': "JSESSIONID=" + wx.getStorageSync('sessionId') },
@@ -159,6 +162,7 @@ Page({
              token: wx.getStorageSync('token')
            },
            success:function(res){
+             wx.hideLoading();
              console.log('data.state',  res.data)
              var data=JSON.parse(res.data);
              console.log('data',data);
@@ -173,7 +177,7 @@ Page({
                console.log(data.data);
                var imgpath = data.data;
                console.log('imgpath',imgpath);
-               wx.navigateTo({
+               wx.redirectTo({
                  url: './../runnew/runned/runned?id=' + id + "&path=" + path + "&name=" + name + "&content=" + content,
                })
              }
@@ -190,4 +194,10 @@ Page({
       // edit_url: tempFilePath
     })
   },
+  onShareAppMessage:function(res){
+    return {
+      title: '运动酷咖',
+      path: '/pages/index/index?positionId=' + true  // 当打开分享链接的时候跳转到小程序首页，并设置参数positionId
+    }
+  }
 })

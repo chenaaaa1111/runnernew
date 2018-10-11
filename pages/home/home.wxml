@@ -6,13 +6,16 @@
     <text >热门推荐</text>
     <text class='second fc999 fs_24' data-val="bm" bindtap='gotoThems'>星座</text>
     <text class='fc999 fs_24' >|</text>
-    <text class='thir fc999 fs_24' bindtap='' data-val="sx">生肖</text>
+    <text class='thir fc999 fs_24' bindtap='' data-val="sx">缅怀</text>
     <text class='fs_24 fc999' >更多>></text>
 </view>
  
 </view>
 <view class='imgContainer'>
-      <image class="imgcover themimages" src='{{shengxiao}}' bindtap='gotoThems'></image><image src='../../images/iosfenge.png' class='fenge'></image>
+      <image class="imgcover themimages" src='{{shengxiao}}' bindtap='gotoThems'></image><image src='../../images/iosfenge.jpg' class='fenge'></image>
     <image class='bottomimage' bindtap='gotocris' src='{{ xingzuo}}'></image>
-
+    <image src='../../images/iosfenge.jpg' class='fenge'></image>
+   <navigator url='./../forword/forword'>
+        <image src='{{word}}' class='wodCap' bindtap=''></image>
+   </navigator> 
 </view>

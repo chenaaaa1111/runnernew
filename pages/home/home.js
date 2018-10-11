@@ -10,7 +10,8 @@ Page({
     xingzuo:'',
     shengxiao:'',
     indicatorDots: false,
-    hasdot:false
+    hasdot:false,
+    'word':"http://47.101.136.23:8080/sport/image/575822035958730970.jpg"
   },
   gotoThems:function(e){
       wx.switchTab({
@@ -23,12 +24,21 @@ Page({
         console.log('res',res);
         if(res.data.data.length>0){
             var imgInfro=res.data.data[0];
+            var wordInfor=res.data.data2;
           var id = imgInfro.id;
             console.log('imgInfor',imgInfro);
           wx.setStorageSync('imgInfor', imgInfro);
           var path = imgInfro.path;
           var name = imgInfro.name;
           var content = imgInfro.content;
+        var wordsstatus = wordInfor.wordsstatus;
+          if (wordsstatus && wordsstatus!=0){
+            var words = wordInfor.words;
+            var wordstime = wordInfor.wordstime;
+            wx.navigateTo({
+              url: './../runnew/runned/runned?id=' + id + "&path=" + path + "&name=" + name + "&content=" + content + "&words=" + words + "&wordstime=" + wordstime,
+            })
+        }
           wx.navigateTo({
             url: './../runnew/runned/runned?id=' + id + "&path=" + path + "&name=" + name + "&content=" + content,
           })
@@ -52,24 +62,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.checkSession()
-    var self=this;
-    this.setData({
-      hasdot:false
-    })
-    requestbaner({},function(res){
-        console.log('res',res.data.data);
-        var xingzuo = res.data.data['sx'];
-        var elsee=res.data.data['xz']
-        self.setData({
-          swiperList: res.data.data2,
-          xingzuo: xingzuo,
-          shengxiao: elsee
-        })
-        for(var i in res.data.data){
-            console.log(res.data.data[i]);
-        }
-    },'GET');
+   
+ 
   },
 
   /**
@@ -85,7 +79,37 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-      
+    console.log('homeonload');
+    this.checkSession()
+    var self = this;
+    this.setData({
+      hasdot: false
+    })
+    try {
+      var jscode = wx.getStorageSync('jscode');
+      if (!jscode) {
+        return;
+      }
+      console.log('jscode', jscode);
+      if (jscode) {
+        requestbaner({}, function (res) {
+          console.log('imgres', res.data.data);
+          var xingzuo = res.data.data['sx'];
+          var elsee = res.data.data['xz'];
+
+          self.setData({
+            swiperList: res.data.data2,
+            xingzuo: xingzuo,
+            shengxiao: elsee
+          })
+          for (var i in res.data.data) {
+            console.log(res.data.data[i]);
+          }
+        }, 'GET');
+      }
+    } catch (e) {
+
+    }
   },
 
   /**
@@ -120,6 +144,6 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+      
   }
 })

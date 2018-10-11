@@ -1,10 +1,6 @@
 
 <!--pages/forwho/forwho.wxml-->
-
 <view class='bg'>
-    <image class='bgi' src='./../../images/forwho/backgrud.png'>  
-    </image>
-
     <view class='header'>
         <text class="text2">今日为</text> <text data-id='{{forwhom}}' class="{{isselect? 'friend active' :' friend' }}" wx:if="{{!zidingyi}}">{{forwhom}}</text> 
          <input wx:if="{{zidingyi}}" focus='{{wfocus}}'  class="sudu" value='{{forwhom}}' placeholder='{{forwhompld}}' bindinput="getwhom"

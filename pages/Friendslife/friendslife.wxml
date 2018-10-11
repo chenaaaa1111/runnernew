@@ -2,33 +2,13 @@
 <!--pages/ranking/ranking.wxml-->
 <scroll-view
 class='body'>
-      <view class='container'>
-    <view class='rankContainer'>
-        <view class='number '>1</view>
-        <image src='./../../images/ranking/dog.png' class='tx'></image>
-        <view class='nameText active'>不过如此</view>
+ <view class='container'>
+    <view wx:for="{{ranking}}" wx:key="{{item.uid}}" class='rankContainer'>
+        <view class='number '>{{index+1}}</view>
+        <image src="{{item.photo}}" class='tx'></image>
+        <view class='nameText active'>{{item.name}}</view>
         <view class='images'>
-            <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
-             <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
-              <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
-               <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
-                <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
-                 <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
-                 <text class='eclipse'>...</text>
-        </view>
-    </view>
-      <view class='rankContainer'>
-        <view class='number '>2</view>
-        <image src='./../../images/ranking/dog.png' class='tx'></image>
-        <view class='nameText'>不过如此</view>
-        <view class='images'>
-            <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
-             <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
-              <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
-               <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
-                <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
-                 <image class='smalltx' src='./../../images/ranking/touxiang.png'></image>
-                 <text class='eclipse'>...</text>
+            <image wx:for="{{item.listxz}}" class='smalltx' src='{{item.path}}'></image>     
         </view>
     </view>
 </view>
@@ -41,7 +21,7 @@ class='body'>
     <view class='coommm'>
     
     </view>
-  <view class='cner'>
+  <!-- <view class='cner'>
         <view class='ctainer'>
             <view class='imageview'>
                 <image src="./../../images/ranking/dog.png" class='tx'></image>
@@ -111,7 +91,8 @@ class='body'>
               </view>
       
     </view>
-</view>
+</view> -->
 
 </scroll-view>
+ <view class='respect'>敬请期待~</view>
 

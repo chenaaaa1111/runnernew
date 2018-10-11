@@ -1,0 +1,150 @@
+/* pages/Thems/thems.wxss */
+page{
+  min-height: 100%;
+  background: url('http://47.101.136.23:8080/sport/image/451916264602459005.jpg') no-repeat center center;
+  background-size: cover;
+}
+.container{
+  width: 100%;
+  min-height: 100%;
+}
+.bgi{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+.backImage{
+  width: 50rpx;
+  height: 44rpx;
+  margin-left: 30rpx;
+  vertical-align: middle
+}
+.left{
+  font-size: 34rpx;
+  width: 480rpx;
+  color: #fff;
+}
+.header{
+  position: relative;
+  display: flex;
+  padding-top: 20rpx;
+  padding-left: 60rpx;
+  padding-right:38rpx;
+  color: #fff;
+
+}
+.hot{
+  position: relative;
+  font-size: 30rpx;
+  color: #fff;
+}
+.hot view{
+  display: inline-block;
+}
+.right{
+  width: 203rpx;
+  height: 30rpx;
+  position: relative;
+}
+.right image{
+    
+}
+.dropup{
+  position:absolute;
+
+}
+.dropdow{
+  position:absolute; 
+}
+.dropdow,.esaydropdow{
+    top:32rpx;
+}
+.dropup,.esaydropup{
+    top:15rpx;
+
+}
+.dropdow,.dropup,.esaydropup,.esaydropdow{
+   width:21rpx;
+   height:14rpx;
+
+}
+.dropup,.dropdow{
+     right:108rpx;
+}
+.esaydropup{
+  position:absolute; 
+}
+.esaydropdow{
+  position:absolute;
+
+}
+.esaydropdow,.esaydropup{
+      right:-2rpx;
+}
+.hot{
+  margin-right: 50rpx;
+  font-size: 30rpx;
+  color: #fff;
+  font-weight: 900;
+
+}
+.easy{
+  font-size: 30rpx;
+  color: #fff;
+  font-weight: 900;
+
+}
+.cardContent{
+  padding-bottom: 0rpx;
+  
+}
+.cardImage{
+  width: 284rpx;
+  margin-left: 58rpx;
+  height: 246rpx;
+}
+.card{
+  display:inline-block;
+position:relative;
+width:324rpx;
+height:334rpx;
+background-position:center center;
+background-repeat:no-repeat;
+background-size:100%;
+margin-left:37rpx;
+  margin-top:20rpx;
+
+}
+.dashline{
+ width:683rpx;
+height:0;
+border-bottom:1px dashed #666;
+margin-top:10rpx;
+margin-left:38rpx;
+
+}
+.level{
+position:absolute;
+bottom:0rpx;
+left:-1rpx;
+width:100%;
+height:40rpx;
+padding-top:0rpx;
+padding-bottom:15rpx;
+text-align: center;
+background-color:rgba(0,0,0,0.5);
+
+}
+.level image{
+  width: 24rpx;
+  height: 24rpx;
+  margin-left: 10rpx;
+}
+.title{
+  text-align: center;
+  padding-top: 20rpx;
+  font-size: 40rpx;
+  color: #333;
+}

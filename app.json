@@ -1,8 +1,8 @@
 {
   "pages":[
-   
     "pages/index/index",
-    "pages/fillImage/fillImage",
+    "pages/startpage/startpage",             
+   "pages/fillImage/fillImage",
     "pages/runnew/runnew",
     "pages/runnew/runned/runned",
     "pages/cherish/cherish",
@@ -13,7 +13,10 @@
      "pages/test/test",
      "pages/logs/logs",
      "pages/ranking/ranking",
-     "pages/Friendslife/friendslife"
+     "pages/Friendslife/friendslife",
+     "pages/forword/forword",
+    "pages/runnerword/runnerword",
+    "pages/cityImages/cityImages"
             
   ],
   "window":{
@@ -24,7 +27,7 @@
   },
   "tabBar": {
     "color": "#7A7E83",
-    "selectedColor": "#3cc51f",
+    "selectedColor": "#fecc19",
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
     "list": [
@@ -44,7 +47,7 @@
         "pagePath": "pages/Friendslife/friendslife",
         "iconPath": "images/icons/circle_icon.png",
         "selectedIconPath": "images/icons/circle_icon_HL.png",
-        "text": "圈子"
+        "text": "运动"
       }
     ]
   },

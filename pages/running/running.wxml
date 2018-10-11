@@ -25,7 +25,7 @@ src='./../../images/running/twive/react/20395594_xxl.jpg'></image> -->
               {{totolNum}}
               </view>
               <view class='tNuber'>
-                今日步数
+                开始跑步
               </view>
         </view>
           

@@ -1,7 +1,7 @@
 <view class='bg'>
     <view class='upContainer' style="background-image:url('http://106.14.153.111:8080/sport/image/821015573693706776.jpg')">
       <view class='s1'>
-          <image class='im1' style="opacity:{{opacity}}" src="{{path}}"></image>
+          
       </view>
       <view class='s2'>
           
@@ -10,7 +10,7 @@
       
       </view>
       <view class='s4'>
-      
+          <image class='im4' style="opacity:{{opacity}}" src="{{path}}"></image>
       </view>
       <view class='s5'>
       
@@ -24,31 +24,10 @@
            <view class='content'>
                     我想说{{content}}
           </view>
-    </view> 
-        <view class='runcontain'>
-    <view class='flima'>
-        <image src="./../../../images/running/runleft.png" class='imass'></image>
-        <view class='number'>
-             <view class='runnumber'>
-              {{totolNum}}
-              </view>
-              <view class='tNuber'>
-                今日步数
-              </view>
-        </view>
-          
-    </view>
-  </view> 
- <view class='flima right'>
-        <image src="./../../../images/running/runright.png" class='imass'></image>
-         <view class='numberright'>
-            <view class='runnumber'>
-              下一目标
-            </view>
-            <view class='tNuber'>
-                -{{nextnum}}
-            </view>
-       </view>
-</view>
+          <image class='startImage' src='./../../../images/weiCode.jpg'></image>
+   </view> 
+      <view class='container'>
+          <showNumber words="{{words}}" isrunnerd="{{isrunnerd}}" bindchangeTime="{{changeTime}}" bindcomit="comit"  date="{{date}}" name="{{id}}"  todayNum="{{imgNum}}" golNumber="{{nextnum}}" bindstartRun="startRun" ></showNumber>
+      </view>
     </view>
 </view> 
