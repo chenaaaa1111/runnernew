@@ -1,5 +1,6 @@
 /* pages/Friendslife/friendslife.wxss */
 /* pages/ranking/ranking.wxss */
+@import '../../lib/font/iconfont.wxss';
 .container{
   padding: 10rpx;
   background: #fff;
@@ -8,7 +9,11 @@
   display: flex;
   height: 90rpx;
   line-height: 90rpx;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #f5f5f5;
+}
+.zanView{
+  padding-left: 40rpx;
+  font-size: 30rpx;
 }
 .smalltx{
   width: 40rpx;
@@ -51,8 +56,13 @@ overflow: hidden;
 .active{
   color: #09bb07;
 }
+.myself{
+  color: #ff4646;
+}
 page,.body{
-  padding-bottom: 40rpx;
+
+  padding-bottom: 0rpx;
+
 }
 .message{
   text-align: center;
@@ -68,6 +78,7 @@ page,.body{
   line-height: 60rpx;
   text-align: center;
   box-shadow: 10rpx 80rpx 60rpx #ccc;
+  background: #fff;
 }
 .bottom img{
  
@@ -81,10 +92,9 @@ page,.body{
 }
 .ctainer{
   display: flex;
-  padding-left: 20rpx;
+  padding-left: 30rpx;
   padding-right: 20rpx;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 40rpx;
+  padding-bottom: 14rpx;
 } 
 .cner{
   margin-top: 10px;
@@ -124,11 +134,19 @@ page,.body{
   font-size: 20rpx;
   color: #999;
   margin-top:20rpx;
+  position: relative;
+  width:533rpx;
+
 }
 .comment{
   padding-left: 40rpx;
   padding-right: 80rpx;
   padding-top:20rpx;
+  height:251rpx;
+  border-top: 1px solid #f5f5f5;
+  overflow:hidden;
+  padding-bottom:20rpx;
+
 }
 .desc{
   font-size: 26rpx;
@@ -143,11 +161,192 @@ page,.body{
     color: #576B99;
     padding-bottom: 20rpx;
     padding-top: 20rpx;
+    padding-left:41rpx;
+
 }
 .cner{
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #f5f5f5;
   padding-bottom: 0rpx;
 }
 .respect{
   text-align: center;
+  color: #999;
+}
+.icon-xiaoxizhongxin{
+  position: absolute;
+  right: -46rpx;
+  top:-2rpx;
+
+}
+.showPhoto{
+ width:275rpx;
+height:66rpx;
+line-height:66rpx;
+background:#000;
+border-radius:10rpx;
+position:absolute;
+right:1rpx;
+top:-11rpx;
+display:flex;
+
+}
+.addLike{
+  width:48rpx;
+height:51rpx;
+margin-left:20rpx;
+vertical-align: middle;
+margin-right: 10rpx;
+
+}
+.imessage{
+width:40rpx;
+height:40rpx;
+vertical-align:middle;
+
+margin-right:10rpx;
+margin-left:20rpx;
+
+
+}
+.iconcomment{
+ width:30rpx;
+height:30rpx;
+color:#fff;
+font-size:38rpx;
+margin-top:-17rpx;
+margin-right:24rpx;
+
+
+}
+.friendcircle{
+background:#f5f5f5;
+height:10rpx;
+
+}
+.edit{
+  position:fixed;
+  bottom:40rpx;
+  right:56rpx;
+  width:100rpx;
+  height:100rpx;
+  border-radius:50%;
+
+
+}
+.commentInput{
+  display: absolute;
+  /* top:-9999999rpx; */
+}
+.addzan{
+  width:157rpx;
+ 
+}
+.addcoment{
+  width: 150rpx;
+}
+.commentLabel{
+  position: absolute;top: -9999999rpx;
+}
+.showAll{
+  height: auto;
+  overflow-y: scroll;
+}
+.moreImage{
+ width:184rpx;
+ margin-right:10rpx;
+ height:184rpx;
+}
+.pocket_input {
+
+position: fixed;
+
+bottom: 0;
+
+width: 100%;
+
+background-color: white;
+
+overflow: hidden,
+
+}
+.input_style{
+
+margin: 12rpx 23rpx;
+
+background-color: #F4F5F6;
+
+font-size: 30rpx;
+
+border-radius: 20rpx;
+
+padding-left: 15rpx;
+ height: 80rpx;
+}
+.input-placeholder{
+
+margin-left: 25rpx;
+
+}
+.showmessage{
+  position:absolute;
+right:-56rpx;
+top:-2rpx;
+width:51rpx;
+height:56rpx;
+
+
+}
+.topview{
+  position: fixed;
+  z-index: 9999999;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  top:0;
+
+  flex-direction: column;
+   align-items:center;
+   justify-content:center;
+}
+.commentList{
+
+  height:1043rpx;
+
+}
+.overhide{
+  height: 100%;
+  overflow: hidden;
+}
+.zanNum{
+  width: 20rpx;
+  height: 20rpx;
+  margin-right: 20rpx;
+}
+.dianzannum{
+  padding-left:125rpx;
+  padding-bottom:20rpx;
+   font-size: 20rpx;
+   color: #b2b2b2;
+}
+.hide{
+  display: none;
+}
+.swiperContainer{
+  height: 100%;
+}
+.slide-image{
+  width:100%;
+  height: 100%;
+}
+swiper-item{
+  display:flex;
+align-items:center;
+justify-content:center;
+background-size:contain;
+
+
+}
+.imgswiter{
+  height:100%;
+
 }

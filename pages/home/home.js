@@ -14,7 +14,7 @@ Page({
     'word':"http://47.101.136.23:8080/sport/image/575822035958730970.jpg"
   },
   gotoThems:function(e){
-      wx.switchTab({
+      wx.navigateTo({
         url: './../Thems/thems',
       })
   },
@@ -36,11 +36,11 @@ Page({
             var words = wordInfor.words;
             var wordstime = wordInfor.wordstime;
             wx.navigateTo({
-              url: './../runnew/runned/runned?id=' + id + "&path=" + path + "&name=" + name + "&content=" + content + "&words=" + words + "&wordstime=" + wordstime,
+              url: '/pagesB/runnew/runned/runned?id=' + id + "&path=" + path + "&name=" + name + "&content=" + content + "&words=" + words + "&wordstime=" + wordstime,
             })
         }
           wx.navigateTo({
-            url: './../runnew/runned/runned?id=' + id + "&path=" + path + "&name=" + name + "&content=" + content,
+            url: '/pagesB/runnew/runned/runned?id=' + id + "&path=" + path + "&name=" + name + "&content=" + content,
           })
         }else{
           wx.navigateTo({

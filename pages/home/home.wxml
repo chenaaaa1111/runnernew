@@ -14,8 +14,8 @@
 <view class='imgContainer'>
       <image class="imgcover themimages" src='{{shengxiao}}' bindtap='gotoThems'></image><image src='../../images/iosfenge.jpg' class='fenge'></image>
     <image class='bottomimage' bindtap='gotocris' src='{{ xingzuo}}'></image>
-    <image src='../../images/iosfenge.jpg' class='fenge'></image>
+    <!-- <image src='../../images/iosfenge.jpg' class='fenge'></image>
    <navigator url='./../forword/forword'>
         <image src='{{word}}' class='wodCap' bindtap=''></image>
-   </navigator> 
+   </navigator>  -->
 </view>

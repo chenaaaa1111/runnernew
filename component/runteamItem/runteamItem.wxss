@@ -1,0 +1,61 @@
+/* component/runteamItem/runteamItem.wxss */
+
+.item-wrap {
+  height: 150rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  padding: 16rpx 30rpx;
+  margin-bottom: 10rpx;
+}
+
+.item-logo {
+  margin: 15rpx 20rpx 15rpx 0;
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.item-title {
+  /* line-height: 30rpx; */
+  font-size: 30rpx;
+  color: #333;
+  height: 40rpx;
+}
+
+.item-text {
+  height: 56rpx;
+  font-size: 24rpx;
+  width: 350rpx;
+  color: #999;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 56rpx;
+}
+
+.item-num {
+  font-size: 24rpx;
+  color: #000;
+  height: 36rpx;
+}
+
+.item-count {
+  line-height: 118rpx;
+  font-size: 30rpx;
+  color: #000;
+}
+
+.clearfix {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}

@@ -4,7 +4,8 @@
 <view wx:for="{{ranking}}" wx:key="{{item.uid}}" class='rankContainer'>
         <view class='number '>{{index+1}}</view>
         <image src="{{item.photo}}" class='tx'></image>
-        <view class='nameText active'>{{item.name}}</view>
+        <view wx:if="{{item.uid!=uid}}" class='{{index<=2?"nameText active":"nameText"}}'>{{item.name}}</view>
+        <view wx:if="{{item.uid==uid}}" class='nameText myself'>{{item.name}}</view>
         <view class='images'>
             <image wx:for="{{item.listxz}}" class='smalltx' src='{{item.path}}'></image>     
         </view>

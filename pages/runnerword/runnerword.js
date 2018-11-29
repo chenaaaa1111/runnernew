@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    isrunnerd:true,
+    isrunnerd:false,
     date:'2018-10-01',
     imgPath: "http://47.101.136.23:8080/sport/image/cityimg/beijingniaochao.jpg",
     opacity:0.2,
@@ -79,6 +79,15 @@ Page({
     this.addImage(sendData,function(res){
         console.log("添加图片");
         var imgPath=res.data.data.path;
+        var messageInfor=res.data.data2;
+      console.log('messageInfo', messageInfor);
+      if (messageInfor.wordsstatus && messageInfor.wordsstatus!=0){
+        self.setData({
+          words: messageInfor.words,
+          date: messageInfor.wordstime,
+        })
+      }
+     
         self.setData({
           imgPath: imgPath
         })

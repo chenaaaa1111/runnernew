@@ -1,0 +1,185 @@
+/* pages/running/running.wxss */
+.runningImage{
+   height: 690rpx;
+   width: 690rpx;
+   border: none;
+}
+.none{
+  display:block; 
+}
+.canvas{
+position:absolute;
+top:76rpx;
+left:30rpx;
+width:690rpx;
+height:690rpx;
+border:none;
+
+
+}
+.imgContainer{
+  text-align: center;
+   padding-left: 30rpx;
+  padding-right: 30rpx;
+  border: none;
+  font-size: 0;
+  height: 690rpx;
+}
+.textContainer{
+  padding-left:27rpx;
+  color:#666;
+  display:flex;
+  padding-bottom:57rpx;
+  position:relative;
+  margin-top:20rpx;
+  font-weight:900;
+  box-sizing:border-box;
+  height:263rpx;
+
+
+}
+.for{
+ padding-left:-8rpx;
+color:#546862;
+font-size: 40rpx;
+width:25rpx;
+text-align:center;
+padding-top:40rpx;
+
+}
+.flima{
+  position: absolute;
+}
+.them{
+ font-size:40rpx;
+color:#546862;
+font-weight:900;
+height:57rpx;
+line-height:57rpx;
+display:block;
+font-style: italic;
+max-width:442rpx;
+font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+}
+.themafter{
+  padding-left: 20rpx;
+  font-size: 40rpx;
+  color:#546862;
+  width: 225rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: normal;
+  /* border-bottom: 1px solid #546862; */
+  text-align: left;
+  padding-top:80rpx;
+}
+.runcontain{
+  display: flex;
+  position: relative;
+  padding-left: 50rpx;
+  margin-top: 70rpx;
+  font-weight: 900;
+}
+.imass{
+ width:300rpx;
+height:150rpx;
+
+}
+ .right{
+  position: absolute;
+  right: 40rpx;
+  font-weight: 900;
+}
+.number{
+  position: absolute;
+  left: 38rpx;
+  top: 21rpx;
+   font-size: 34rpx;
+  color: #666;
+}
+.numberright{
+  right: 30rpx;
+  top: 23rpx;
+  position: absolute;
+}
+.tNuber{
+  margin-top: 7rpx;
+  font-size: 40rpx;
+  color: #666;
+}
+.runnumber{
+  font-size: 40rpx;
+  color: #666;
+}
+.baposition{
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  min-height:1234rpx;
+}
+.textform{
+  width: 300rpx;
+  height: 80rpx;
+}
+.bottomView{
+  margin-top: 330rpx;
+  padding-left:50rpx;
+}
+.textimage{
+  margin-left:30rpx;
+}
+#canvasbg{
+  width: 690rpx;
+  height: 690rpx;
+  position: relative;
+}
+.bg{
+  position: relative;
+  left: 0;
+   width:690rpx;
+   height: 690rpx;
+   border:none;
+}
+.topFont{
+  width: 671rpx;
+  height: 40rpx;
+  margin-left:36rpx;
+  margin-top: 20rpx;
+  margin-bottom:4rpx;
+}
+.ileft{
+  margin-left: -15rpx;
+
+}
+.iright{
+  margin-right: 0rpx;
+}
+.weiCode{
+ position:absolute;
+width:170rpx;
+height:170rpx;
+top:70rpx;
+left:36rpx;
+}
+.startRun{
+  text-align: center;
+
+}
+.start{
+  width: 690rpx;
+  height: 88rpx;
+  margin-left: 30rpx;
+}
+.btNum{
+  position: absolute;
+  width: 100%;
+  bottom: 172rpx;
+}
+.dataview{
+  position: absolute;
+}
+.runDiv{
+  position:relative;
+}

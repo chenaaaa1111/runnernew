@@ -1,29 +1,46 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/startpage/startpage",             
-   "pages/fillImage/fillImage",
-    "pages/runnew/runnew",
-    "pages/runnew/runned/runned",
+    "pages/addFriendLy/addFriendLy",
+    "pages/startpage/startpage",
+    "pages/fillImage/fillImage",
+    
     "pages/cherish/cherish",
-    "pages/forwho/forwho",
     "pages/home/home",
-     "pages/Thems/thems",
-     "pages/running/running",
-     "pages/test/test",
-     "pages/logs/logs",
-     "pages/ranking/ranking",
-     "pages/Friendslife/friendslife",
-     "pages/forword/forword",
+    "pages/Thems/thems",
+    "pages/test/test",
+    "pages/logs/logs",
+    "pages/ranking/ranking",
+    "pages/Friendslife/friendslife",
     "pages/runnerword/runnerword",
-    "pages/cityImages/cityImages"
-            
+    "pages/cityImages/cityImages",
+    "pages/runteam/runteam",
+    "pages/runList/runList",
+    "pages/runRank/runRank", "pages/runteam/createTeam/createTeam",  "pages/runteam/personTeam/personTeam",
+    "pages/runteam/joinTeam/joinTeam",
+    "pages/propaganda/propaganda",
+    "pages/manageTeam/manageTeam",
+    "pages/runteam/selectAvatar/selectAvatar",
+    "pages/echart/echart"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "subPackages": [
+    {
+      "root": "pagesB",
+      "pages": [
+        "forwho/forwho",
+        "forword/forword",
+        "running/running",
+        "runnew/runnew",
+        "runnew/runned/runned"
+
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#ffc801",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#7A7E83",
@@ -38,21 +55,20 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/Thems/thems",
-        "iconPath": "images/icons/sports_icon.png",
-        "selectedIconPath": "images/icons/sports_icon_HL.png",
+        "pagePath": "pages/runteam/runteam",
+        "iconPath": "images/icons/runner.png",
+        "selectedIconPath": "images/icons/runner_HL.png",
         "text": "运动"
       },
       {
         "pagePath": "pages/Friendslife/friendslife",
         "iconPath": "images/icons/circle_icon.png",
         "selectedIconPath": "images/icons/circle_icon_HL.png",
-        "text": "运动"
+        "text": "大咖圈"
       }
     ]
   },
   "usingComponents": {
-    "login":"./component/login/index"
+    "login": "./component/login/login"
   }
-
 }

@@ -1,6 +1,6 @@
 // pages/ranking/ranking.js
 import request from './../../utils/request.js';
-
+const app = getApp();
 Page({
 
   /**
@@ -10,7 +10,9 @@ Page({
     ranking: [],
     pageNum: 1,
     ishas:true,
-    pageSize:15
+    pageSize:15,
+    userName:'',
+    uid:0
   },
   scrollload:function(e){
     var self=this;
@@ -24,13 +26,13 @@ Page({
     var sendData = { pageNum: this.data.pageNum,
       pageSize: this.data.pageSize};
     request.req.requestRanking(sendData, function (res) {
-
+      wx.hideLoading();
       console.log('查询排行榜', res.data.data);//查询排行榜
       if(!res.data.data||res.data.data.length==0)      {
         self.setData({ ishas:false});
         return;
       }
-      wx.hideLoading();
+    
       var lists = res.data.data;
       self.setData({
         ranking: self.data.ranking.concat(lists),
@@ -49,11 +51,18 @@ Page({
   onLoad: function (options) {
     //查询排行榜
     var self=this;
+    var userName = app.globalData.userInfo.name ;
+    console.log(userName);
     var sendDa = {
       pageNum: this.data.pageNum,
       pageSize: this.data.pageSize
     }
     request.req.requestRanking(sendDa, function (res) {
+      var uid=res.data.data2;
+      console.log('uid',uid);
+      self.setData({
+        uid: uid
+      })
 
       console.log('查询排行榜', res.data.data);//查询排行榜
       var lists = res.data.data;

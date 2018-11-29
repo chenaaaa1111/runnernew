@@ -178,7 +178,7 @@ Page({
                var imgpath = data.data;
                console.log('imgpath',imgpath);
                wx.redirectTo({
-                 url: './../runnew/runned/runned?id=' + id + "&path=" + path + "&name=" + name + "&content=" + content,
+                 url: '／pagesB/runnew/runned/runned?id=' + id + "&path=" + path + "&name=" + name + "&content=" + content,
                })
              }
            }

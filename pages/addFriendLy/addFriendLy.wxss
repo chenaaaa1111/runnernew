@@ -1,0 +1,44 @@
+/* pages/addFriendLy/addFriendLy.wxss */
+.upitems{
+width:180rpx;
+height:180rpx;
+margin:10rpx;
+
+}
+.imgContainer{
+  padding: 10rpx 20rpx 10rpx 20rpx;
+}
+.imgUp{
+ width:180rpx;
+  height:180rpx;
+  margin:10rpx;
+
+}
+.placehold{
+  font-size: 30rpx;
+  color: #999;
+  margin-left: 30rpx;
+}
+.addComment{
+  padding: 30rpx;
+  font-size: 30rpx;
+  color: #999;
+  height:190rpx;
+
+}
+.sendMessage{
+  color:#3d3d3d;
+  background: yellow;
+text-align:center;
+position:fixed;
+width:100%;
+bottom:200rpx;
+
+}
+.commenImage{
+  position: absolute;
+  bottom: 128rpx;
+  width: 690rpx;
+  height: 88rpx;
+  left:30rpx;
+}

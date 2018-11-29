@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "跑团列表",
+  "usingComponents": {
+    "runteamItem": "./../../component/runteamItem/runteamItem"
+  }
+}

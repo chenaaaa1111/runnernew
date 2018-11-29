@@ -1,0 +1,16 @@
+<view class='container'>
+    <textarea class='addComment'   placeholder-class="placehold"
+ value="{{comment}}" placeholder='这一刻想法' bindinput='textinput'>
+    
+    </textarea>
+    <view class='imgContainer'>
+          <view >
+                <image class='upitems' wx:for="{{upImgFiles}}" src="{{item}}"></image>
+                <image src='./../../images/friendsLife/addImage.jpg' class='imgUp' bindtap='upImg'>
+                </image>
+          </view>
+    </view>
+     <image class='commenImage' src="./../../images/friendsLife/commentComm.jpg" bindtap="addComment"></image>
+    <!-- <button class='sendMessage' bindtap="addComment">发表</button> -->
+</view> 
+

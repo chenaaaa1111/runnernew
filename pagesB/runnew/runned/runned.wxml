@@ -1,0 +1,33 @@
+<view class='bg'>
+    <view class='upContainer' style="background-image:url('http://106.14.153.111:8080/sport/image/821015573693706776.jpg')">
+      <view class='s1'>
+          
+      </view>
+      <view class='s2'>
+          
+      </view>
+      <view class='s3'>
+      
+      </view>
+      <view class='s4'>
+          <image class='im4' style="opacity:{{opacity}}" src="{{path}}"></image>
+      </view>
+      <view class='s5'>
+      
+      </view>
+    </view>
+    <view class='downcontainer' style='background-image:url("http://106.14.153.111:8080/sport/image/303618081123162128.jpg")' >
+    <view class='message'>
+          <view class='title'>
+                        今日为{{name}}而跑
+          </view>
+           <view class='content'>
+                    我想说{{content}}
+          </view>
+          <image class='startImage' src='/pagesB/images/weiCode.jpg'></image>
+   </view> 
+      <view class='container'>
+          <showNumber words="{{words}}" isrunnerd="{{isrunnerd}}" bindchangeTime="{{changeTime}}" bindcomit="comit"  date="{{date}}" name="{{id}}"  todayNum="{{imgNum}}" golNumber="{{nextnum}}" bindstartRun="startRun" ></showNumber>
+      </view>
+    </view>
+</view> 

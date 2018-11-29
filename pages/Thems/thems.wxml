@@ -1,5 +1,5 @@
 <view class='container'>
- <image class='bgi' src='./../../images/themsItem/bgbg.jpg'>  
+ <image class='bgi' src='http://47.101.136.23:8080/sport/image/864292325461038397.jpg'>  
     </image>
     <view class="header">
         <view class='left'  bindtap='goback'>
@@ -7,14 +7,13 @@
             <image class='backImage'  src="{{isclick?'./../../images/themsItem/back_s.png':'./../../images/themsItem/backicon.png'}}"></image>
             
         </view>
-        <view class='right'>
+        <!-- <view class='right'>
               <text class="hot">热门</text>
                       <image class='dropup' src="{{'./../../images/themsItem/'+(dropUp?'dropUp_s.png':'drowUp.png')}}"></image>
               <image class='dropdow' src="{{'./../../images/themsItem/'+(dropUp?'drowDown.png':'dropDown_s.png')}}"></image>              
                 <text class="easy">简单</text>
-                 <!-- <image class='esaydropup' src="{{'./../../images/themsItem/'+(easydropUp?'dropUp_s.png':'drowUp.png')}}"></image> -->
               <image class='esaydropdow' src="{{'./../../images/themsItem/'+(easydropUp?'dropDown.png':'dropDown_s.png')}}"></image> 
-        </view>   
+        </view>    -->
     </view>
     <view class='content'>
         <view class='cardContent' wx:for="{{dataList}}"  wx:key="{{item.name}}" >

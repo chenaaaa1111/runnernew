@@ -1,98 +1,112 @@
-<!--pages/Friendslife/friendslife.wxml-->
-<!--pages/ranking/ranking.wxml-->
-<scroll-view
+
+<view class="{{!showcoverImage?'autoShow':'autoshow overhide'}}">  
+<scroll-view scroll-y class='commentList' bindscrolltolower="loadMore" bindscroll="scrollfriend" >
+<scroll-view 
 class='body'>
  <view class='container'>
-    <view wx:for="{{ranking}}" wx:key="{{item.uid}}" class='rankContainer'>
-        <view class='number '>{{index+1}}</view>
+    <view wx:if="{{true}}">
+       <view wx:for="{{ranking}}" wx:key="{{item.uid}}" class='rankContainer'>
+        <view class='number '>{{item.rangking}}</view>
         <image src="{{item.photo}}" class='tx'></image>
-        <view class='nameText active'>{{item.name}}</view>
+         <view wx:if="{{!item.isuid}}" class='{{item.rangking<=3?"nameText active":"nameText"}}'>{{item.name}}</view>
+        <view wx:if="{{item.isuid}}" class='nameText myself'>{{item.name}}</view>
         <view class='images'>
             <image wx:for="{{item.listxz}}" class='smalltx' src='{{item.path}}'></image>     
         </view>
+       </view>
     </view>
+    <view wx:if="{{false}}">
+          <view wx:for="{{ranking}}" wx:key="{{item.uid}}" class='rankContainer'>
+        <view class='number '>{{item.rangking}}</view>
+        <image src="{{item.photo}}" class='tx'></image>
+        <view class='{{item.isuid?"nameText myself active":"nameText active"}}'>{{item.name}}</view>
+        <view class='images '>
+            <image wx:for="{{item.listxz}}" class='smalltx' src='{{item.path}}'></image>     
+        </view>
+       </view>
+    </view>
+  
 </view>
    <navigator  url='./../ranking/ranking'>
               <view class='bottom' >
         <image class='dropimage' src='./../../images/friendsLife/down.png'></image> 
     </view>
    </navigator>
-  
     <view class='coommm'>
-    
     </view>
-  <!-- <view class='cner'>
+</scroll-view>
+ <view class='friendcircle'>
+ </view>
+   
+      <view wx:for="{{friedList}}" class='cner'>
+         
         <view class='ctainer'>
             <view class='imageview'>
-                <image src="./../../images/ranking/dog.png" class='tx'></image>
+                <image src="{{item.uphoto}}" class='tx'></image>
             </view>
             <view class='right'>
-                <view class='name'>
-                    想飞的秘密
+                <view class='name'>{{item.uname}}
                 </view>
-                <view class='descm'>多运动，去外面走走</view>
+                <view class='descm'>{{item.mastername}}</view>
                 <view class='descimages'>
-                    <view class='image'>
-                        <image class='friendimage' src="./../../images/themsItem/s6.png">
+                    <view class='image' >
+                        <image mode="widthFix" wx:for="{{item.imglist}}" data-imgList="{{item.imglist}}" wx:for-item='img' data-value="{{item.imglist.length}}" class='{{item.imglist.length>1?"friendimage moreImage":"friendimage"}}' data-id="{{item.id}}"  bindtap="showImage" data-src="{{img.path}}"  src="{{img.path}}">
                         </image>
                     </view> 
-                    <view class='pubtime'>
-                        1小时前
+                    <view class='pubtime' >           
+   {{item.dates}}  <view wx:if="{{showNummessage==item.id}}" class='showPhoto'>
+   <view bindtap="addzan"  class='addzan' data-id='{{item.id}}'>
+        <image  src='./../../images/friendsLife/like.png' id="{{item.id}}"   class='addLike'></image>
+        {{item.islike==1?"取消":"赞"}}
+   </view>
+   <view bindtap="addMessage" class='addcoment' data-uid="{{item.uid}}" data-id='{{item.id}}'>
+                   <image src='./../../images/friendsLife/message.png' class="imessage" ></image> 评论         
+               </view> 
+            </view>  
+    <image src='{{showNummessage==item.id?"./../../images/friendsLife/showmessA.jpg":"./../../images/friendsLife/showmess.jpg"}}' bindtap="showMeage" id="{{item.id}}" class=" showmessage"></image>
                     </view>
                 </view>
             </view>
     </view>
-    <view class='comment'>
-        <view class='comItem'>
-            <text class='rename'>残花落叶:</text><text class='desc'>那个男生是谁呀</text>
-           
-        </view>
-        <view class='comItem'>
-               <text class='rename'>想飞的秘密:</text> <text class='reward'>回复</text> 
-               <text class='rename'>残花落叶:</text>  <text>就不告诉你</text>
-        </view>
-        <view class='more'>
+    <view class='dianzannum'><image class='zanNum' src='./../../images/friendsLife/likeNum.png'></image>{{item.likenum}}人觉得很赞</view>
+
+    <view wx:if="{{item.commentlist.length>0}}" class='{{isShowAll?"comment showAll":"comment"}}' >
+     
+        <view class='comItem' wx:for-item="commen" wx:for="{{item.commentlist}}" >
+           <view data-comuname="{{commen.comunames}}" data-masterid="{{item.id}}" data-manId="{{commen.comuids}}" bindtap='replay' id="{{commen.comid}}">
+                  <text class='rename'>{{commen.comunames}}:</text>
+                  <text class='desc'>{{commen.content}}</text> 
+            </view>           
+              <view class='comItem'  wx:for-item="replay"  wx:for="{{commen.replylist}}"
+data-comuname="{{replay.replyunames}}" bindtap="replay"  data-masterid="{{item.id}}" data-manId="{{replay.replyuids}}" id="{{commen.comid}}"
+              >
+               <text class='rename'  >{{replay.replyunames}}:</text> <text class='reward'>回复</text> 
+               <text class='rename'>{{replay.replyuname}}:</text><text>{{replay.replyContent}}</text>
+               </view>     
+        </view>     
+    </view>   
+          <view wx:if="{{!isShowAll&&(item.commentlist.length>5)}}"  class='more'  bindtap="changeShowAll">
             更多>>
         </view>
-    </view>
 </view>
- <view class='cner'>
-        <view class='ctainer'>
-            <view class='imageview'>
-                <image src="./../../images/ranking/dog.png" class='tx'></image>
-            </view>
-            <view class='right'>
-                <view class='name'>
-                    想飞的秘密
-                </view>
-                <view class='descm'>多运动，去外面走走</view>
-                <view class='descimages'>
-                    <view class='image'>
-                        <image class='friendimage' src="./../../images/themsItem/s6.png">
-                        </image>
-                    </view> 
-                    <view class='pubtime'>
-                        1小时前
-                    </view>
-                </view>
-            </view>
-    </view>
-    <view class='comment'>
-        <view class='comItem'>
-            <text class='rename'>残花落叶:</text><text class='desc'>那个男生是谁呀</text>
-           
-        </view>
-        <view class='comItem'>
-               <text class='rename'>想飞的秘密:</text> <text class='reward'>回复</text> 
-               <text class='rename'>残花落叶:</text>  <text>就不告诉你</text>
-        </view>
-          <view class='more'>
-                更多>>
-              </view>
-      
-    </view>
-</view> -->
+</scroll-view> 
+<navigator url='./../addFriendLy/addFriendLy' class='edit'>
+  <image  src='./../../images/friendsLife/addLife.jpg' class='edit' bindtap='editFriend'></image>
+</navigator>
+<view class='pocket_input'  wx:if="{{inputShow}}" >
+<input type='text' placeholder-style='input-placeholder' cursor='{{cursor_position}}' class='input_style' placeholder='{{placeholder}}' focus='{{focus}}' cursor-spacing="2"  maxlength='30' bindfocus="bindfocus" bindblur="bindblur" bindconfirm="commitConfirm"></input>
+</view>
+</view>
 
-</scroll-view>
- <view class='respect'>敬请期待~</view>
-
+<view class='topview' bindtap='hidecoverImage' wx:if="{{showcoverImage}}">
+  <view class='swiperContainer'>
+      <swiper class='imgswiter' indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{imgUrls}}">
+          <swiper-item>
+            <image src="{{item.path}}" mode="aspectFit" class="slide-image" width="355" height="500"/>
+          </swiper-item>
+        </block>
+      </swiper>
+  </view>
+</view>

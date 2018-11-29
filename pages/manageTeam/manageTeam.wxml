@@ -1,0 +1,29 @@
+<!--pages/manageTeam/manageTeam.wxml-->
+<!-- 团员管理页面 -->
+<view>
+  <view class="tab-head">
+    <text class="float-right {{ischeck ? 'mr70' : ''}}">{{label}}</text>
+    <text>跑团成员</text>
+  </view>
+ <scroll-view  wx:if="{{personList.length > 0}}">
+  <view class="item" wx:for="{{personList}}" wx:key="{{item.logTime}}">
+    <view class="float-right {{ischeck ? 'mr30' : 'mr60'}}">
+      <text class="time {{ischeck ? 'mr54' : ''}}">{{item.updateTime || "--"}}</text>
+      <image wx:if="{{ischeck}}" class="checkbox" data-index="{{index}}" bindtap="checkItem" src="{{item.checked ? './../../images/runteam/checked.png': './../../images/runteam/uncheck.png' }}"></image>
+    </view>
+    <text class="number">{{index+1}}</text>
+    <image class="logo" src="{{item.uphoto}}" data-src="{{item.uphoto}}" mode="aspectFill"></image>
+    <text class="name">{{item.uname}}</text>
+  </view>
+ </scroll-view>
+ <view wx:else class="word-in-bottom">暂无入团申请</view>
+  <view class="btn-wrap">
+    <view wx:if="{{!ischeck}}" style="position:relative;">
+      <image wx:if="{{hasApply}}" class="notice" mode="aspectFit" src="./../../images/runteam/notice.png"></image>
+      <image class="btn" bindtap="clickCheckIn" mode="aspectFit" src="./../../images/runteam/inOp.png"></image>
+      <image class="btn" bindtap="checkOut" mode="aspectFit" src="./../../images/runteam/outOp.png"></image>
+    </view>
+    <image wx:if="{{ischeck&&checkLog==='1'}}" bindtap="agreCheckIn" class="opBtn" mode="aspectFit" src="./../../images/runteam/confirmIn.png"></image>
+    <image wx:if="{{ischeck&&checkLog==='2'}}" bindtap="agreCheckOut" class="opBtn" mode="aspectFit" src="./../../images/runteam/confirmOut.png"></image>
+  </view>
+</view>

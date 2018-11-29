@@ -1,0 +1,32 @@
+.select-avatar-btns {
+  text-align: center;
+  font-size: 32rpx;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 9999;
+  align-items: center;
+  /* line-height: 50px; */
+  height: 50px;
+  background-color: #fff;
+  color:#000;
+}
+.select-avatar-btns view{
+  flex-grow: 1;
+  text-align: center;
+}
+
+.cropper-wrapper {
+  background: #fff;
+}
+.cropper-wrapper-bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgb(0, 0, 0);
+  z-index: 22;
+}

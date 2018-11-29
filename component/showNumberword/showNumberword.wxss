@@ -47,9 +47,19 @@ height:150rpx;
 
 }
  .right{
+   
   position: absolute;
   right: 27rpx;
   font-weight: 900;
+}
+ .rightb{
+  width:352rpx;
+  height:142rpx;
+  position:absolute;
+  right:0rpx;
+  font-weight:900;
+  top:-14rpx;
+
 }
 .number{
   position: absolute;
@@ -72,14 +82,15 @@ height:150rpx;
   font-size: 40rpx;
   color: #666;
 }
+.imgright{
+  position: relative;
+}
 .runnumb{
 color:#666;
-position:relative;
-top:20rpx;
-width:-14px;
 font-size:25rpx;
-right:-11px;
 z-index:999;
+/* padding-top:26rpx; */
+
 
 }
 .qianming{
@@ -134,24 +145,26 @@ left:19rpx;
   position:absolute;
   width:100%;
   bottom:156rpx;
-  left:-14rpx;
+  
 
 }
 .comp{
   top: -122rpx;
 }
 .imessage{
- width:352rpx;
+width:352rpx;
 height:231rpx;
 position:absolute;
-right:-28rpx;
-top:-69rpx;
+right:0rpx;
+top:-45rpx;
+
 
 }
 .dataview{
- position:absolute;
+/* position:absolute; */
 top:-22rpx;
-left:102rpx;   
+right:19px;
+text-align: center;  
 }
 .imgContainer{
   position: absolute;

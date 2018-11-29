@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'runiconfont';  /* project id 882089 */
+  src: url('//at.alicdn.com/t/font_882089_rl3hezkybss.eot');
+  src: url('//at.alicdn.com/t/font_882089_rl3hezkybss.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_882089_rl3hezkybss.woff') format('woff'),
+  url('//at.alicdn.com/t/font_882089_rl3hezkybss.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_882089_rl3hezkybss.svg#runiconfont') format('svg');
+}
+
+.runiconfont {
+  font-family:"runiconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-shuaxin:before { content: "\e650"; }
+
+.icon-wodefankui:before { content: "\e656"; }
+
+.icon-xiaoxizhongxin:before { content: "\e665"; }
+
+.icon-jushoucanggift:before { content: "\e684"; }
+

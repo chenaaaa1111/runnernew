@@ -1,1 +1,4 @@
 /* component/datepiker/datepiker.wxss */
+.picker{
+  white-space: nowrap;
+}

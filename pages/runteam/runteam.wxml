@@ -1,0 +1,31 @@
+<!--pages/runteam/runteam.wxml-->
+<view>
+  <!-- <view>这是跑团首页</view> -->
+  <view class="home-header">
+    <view class="position-detail" bindtap="goPropaganda">
+      <image style="width:200rpx;height:66rpx;" src="./../../images/runteam/homepage/detailbtn.png"></image>
+    </view>
+    <view class="header-img"></view>
+    <!-- <image mode="widthFix" class="header-img" src="./../../images/runteam/homepage/detailpage.png"></image> -->
+  </view>
+  <view class="formore">
+    <!-- 这里跳转排行页面 -->
+    <view class="float-right" bindtap="goTeamList">
+      <text style="font-size: 24rpx;color: #999;line-height:30rpx;">查看更多</text>
+      <image class="more-img" mode="aspectFit" src="./../../images/runteam/homepage/more.png"></image>
+    </view>
+    <image class="page-img" mode="aspectFit" src="./../../images/runteam/homepage/page.png"></image>
+    <text style="font-size: 30rpx;color: #333;">推荐跑团</text>
+  </view>
+  <view style="min-height:500rpx;">
+    <view wx:for="{{teamList}}" wx:key="{{item.id}}">
+      <runteamItem data="{{item}}" bindtap="goPersonTeam" data-index="{{index}}"></runteamItem>
+    </view>
+  </view>
+  <view class="bottomView">
+    <image class="imgbutton" bindtap="goCreateTeam" src="./../../images/runteam/homepage/createTeambtn.png"></image>
+    <image class="imgbutton" bindtap="goTeamList" src="./../../images/runteam/homepage/jionteambtn.png"></image>
+  </view>
+  <!-- 临时用——个人首页 -->
+  <!-- <view bindtap="goPersonTeam">临时用跳转个人首页</view> -->
+</view>

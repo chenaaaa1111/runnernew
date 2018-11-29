@@ -1,0 +1,85 @@
+<!--pages/runteam/personTeam/personTeam.wxml-->
+<!-- 跑团详情 -->
+<view>
+  <view class="logo-wrap">
+    <view class="position-more clearfix" bindtap="goRunList">
+      <text class="more-text float-left">查看更多</text>
+      <image class="more-img float-right" mode="aspectFit" src="./../../../images/runteam/homepage/more.png"></image>
+    </view>
+    <view>
+      <image class="logo" bindtap="changeLogo" src="{{team.logo}}" data-src="{{team.logo}}" mode="aspectFill"></image>
+      <view class="team-name">
+      <text>{{team.name}}</text>
+      <view bindtap="infoChange" class="info-btn"></view>
+      </view>
+    </view>
+  </view>
+  <!-- 团队信息 -->
+  <view class="info-wrap">
+    <view>
+      <text class="label">团长:</text>
+      <text class="text">{{team.leadname}}</text>
+    </view>
+    <view>
+      <text class="label">跑团排名:</text>
+      <text class="text">{{"第" + (team.teamrank) + "名"}}</text>
+    </view>
+    <view>
+      <text class="label">人数:</text>
+      <text class="text">{{(team.people || "1") + "/100"}}</text>
+      <text class="admin-label" wx:if="{{isadmin}}" bindtap="goManageTeam">管理</text>
+      <!--   -->
+    </view>
+    <view>
+      <text class="label">步数总量:</text>
+      <text class="text">{{(team.step) + "步"}}</text>
+    </view>
+  </view>
+  <!--个人信息 -->
+  <view class="person-info">
+    <view>
+      <image class="info-icon" mode="aspectFit" src="./../../../images/runteam/mystepIcon.png"></image>
+      <text>我的步数:</text>
+      <text class="info-text">{{(team.userstep) + "步"}}</text>
+    </view>
+    <view>
+      <image class="info-icon" mode="aspectFit" src="./../../../images/runteam/withinRankIcon.png"></image>
+      <text>团内排行:</text>
+      <text class="info-text">{{"第" + (team.teamrank) + "名"}}</text>
+      <image class="check-icon" bindtap="goRunRank" mode="aspectFit" src="./../../../images/runteam/checkIcon.png"></image>
+    </view>
+    <view>
+      <image class="info-icon" mode="aspectFit" src="./../../../images/runteam/rankIcon.png"></image>
+      <text>跑团排名:</text>
+      <text class="info-text">{{"第" + (team.userrank) + "名"}}</text>
+      <image class="check-icon" bindtap="goRunRank" mode="aspectFit" src="./../../../images/runteam/checkIcon.png"></image>
+    </view>
+    <view>
+      <image class="info-icon" mode="aspectFit" src="./../../../images/runteam/groupChatIcon.png"></image>
+      <text>微信群聊:</text>
+      <image class="info-icon info-text"bindtap="previewImage" mode="aspectFit" src="./../../../images/runteam/chat-QRcode.png"></image>
+    </view>
+  </view>
+ 
+  <view class="reco-wrap">
+   <!-- 跑团推荐 -->
+    <view>
+      <image class="page-img" mode="scaleToFill" src="./../../../images/runteam/homepage/page.png"></image>
+      <text class="reco-label">跑团推荐</text>
+    </view>
+    <view class="reco-cnt1">
+      <image class="reco-RQ" mode="aspectFit" src="./../../../images/runteam/recommendIcon.png" bindtap="goPropaganda"></image>
+      <view>点击二维码保存到您的手机，分享给你的朋友，让他们与你并肩作战！</view>
+    </view>
+    <!-- 跑团公告 -->
+    <view style="mt24">
+      <image class="page-img" mode="scaleToFill" src="./../../../images/runteam/homepage/page.png"></image>
+      <text class="reco-label">跑团公告</text>
+    </view>
+    <textarea class="reco-cnt2" disabled="{{!isadmin}}" placeholder-class="notice-text" bindconfirm="addNotice" placeholder="{{team.placeholder}}" value="{{team.notice}}"></textarea>
+  </view>
+  <view class="bottomView">
+    <image style="width:100%;height:88rpx;" bindtap="outTeam" mode="aspectFit" src="./../../../images/runteam/outTeam.png"></image>
+  </view>
+
+</view>

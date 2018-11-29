@@ -24,9 +24,14 @@
 
 }
 .number{
-  padding-left: 50rpx;
-  padding-right: 28rpx;
+  padding-left:10rpx;
+  padding-right: 10rpx;
   font-size: 36rpx;
+  width:80rpx;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   vertical-align: middle;
 }
 .nameText{
@@ -52,8 +57,10 @@ overflow: hidden;
 .active{
   color: #09bb07;
 }
+.myself{
+  color: #ff4646;
+}
 page,.body{
-  padding-bottom: 40rpx;
   height: 100%;
 }
 .message{
@@ -152,4 +159,5 @@ page,.body{
 }
 .respect{
   text-align: center;
+  color: #999;
 }

@@ -1,0 +1,11 @@
+<view class="activity">
+  <view class="first-line">
+    <text>我是</text>
+    <text>水幻盟</text>
+    <text>的</text>
+    <text>不过如此</text>
+    <text>诚邀您</text>
+  </view>
+  <view class="second-line">加入</view>
+  <image src="../../images/propaganda/QRCode@2x.png"></image>
+</view>

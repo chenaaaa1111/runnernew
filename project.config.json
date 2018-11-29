@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 16,
+			"current": 21,
 			"list": [
 				{
 					"id": -1,
@@ -135,7 +135,38 @@
 					"id": -1,
 					"name": "扫码",
 					"pathName": "pages/home/home",
+					"query": "",
 					"scene": "1025"
+				},
+				{
+					"id": 17,
+					"name": "朋友圈",
+					"pathName": "pages/Friendslife/friendslife",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "发朋友圈",
+					"pathName": "pages/addFriendLy/addFriendLy",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "跑团排行",
+					"pathName": "pages/runRank/runRank",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "跑团列表",
+					"pathName": "pages/runList/runList",
+					"query": ""
+				},
+				{
+					"id": 21,
+					"name": "跑团首页列表",
+					"pathName": "pages/runteam/runteam",
+					"query": ""
 				}
 			]
 		}

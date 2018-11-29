@@ -71,7 +71,6 @@ font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
 .runcontain{
   display: flex;
   position: relative;
-  padding-left: 50rpx;
   margin-top: 161rpx;
   height:180rpx;
 }

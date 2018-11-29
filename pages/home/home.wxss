@@ -23,17 +23,18 @@
   margin-left: 20rpx;
 }
 .themimages{
-  width: 100%;
-  height:542rpx;
-
+  width:690rpx;
+  height:500rpx;
+  margin-left:30rpx;
 }
 .fenge{
   height: 22rpx;
   width: 100%;
 }
 .bottomimage{
-  width: 100%;
-  height: 542rpx;
+  width: 690rpx;
+  height: 500rpx;
+  margin-left: 30rpx;
 }
 .runnavigator{
   height: 350rpx;

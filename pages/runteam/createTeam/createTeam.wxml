@@ -1,0 +1,36 @@
+<!--pages/runteam/createTeam/createTeam.wxml-->
+<!-- <text>这是创建跑团页面</text> -->
+<view>
+  <view class="logo-wrap">
+    <image class="logo" src="{{logosrc}}" bindtap="upLogo" mode="aspectFill"></image>
+    <view class="logo-text" bindtap="upLogo">上传logo</view>
+  </view>
+  <view class="input-label">
+    <image class="page-img" mode="scaleToFill" src="./../../../images/runteam/homepage/page.png"></image>
+    <text>跑团名称</text>
+    <text class="input-icon" wx:if="{{uninpt}}">*</text>
+  </view>
+  <view class="input-wrap">
+    <input maxlength="8" disabled="{{isChange}}" type="text" value="{{name}}" bindblur="nameValida" placeholder-class='placeholder' placeholder="请输入2-8个字之间"></input>
+  </view>
+  <view class="input-label">
+    <image class="page-img" mode="scaleToFill" src="./../../../images/runteam/homepage/page.png"></image>
+    <text>跑团口号</text>
+  </view>
+  <view class="input-wrap">
+    <input maxlength="25" type="text" value="{{slogan}}" bindblur="sloganValida" placeholder-class='placeholder' placeholder="请输入最多不超过25个字"></input>
+  </view>
+  <view class="input-label">
+    <image class="page-img" mode="scaleToFill" src="./../../../images/runteam/homepage/page.png"></image>
+    <text>跑团简介</text>
+  </view>
+  <view class="input-wrap">
+    <textarea maxlength="500" value="{{intro}}" bindblur="introValida" placeholder-class='placeholder' placeholder="相信您的团有一个传奇的背景"></textarea>
+  </view>
+  <view class="switch-label">
+    <text>是否开启入团审核</text>
+    <switch checked="{{addIsChk}}" bindchange="switchChange"></switch>
+  </view>
+  <image class="confirm-btn" bindtap="createTeam" wx:if="{{!isChange}}" src="./../../../images/runteam/createTeam.png"></image>
+  <image class="confirm-btn" bindtap="changeInfo" wx:else src="./../../../images/runteam/updateBtn.png"></image>
+  </view>

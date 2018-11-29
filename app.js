@@ -33,6 +33,7 @@ App({
                   console.log("getSetting", this.globalData.userInfo)
                   console.log('resuserInfor', res.userInfo)
                   console.log('jscode', wx.getStorageSync('jscode'));
+
                   var sendData = {
                     'jscode': wx.getStorageSync('jscode'),
                     'name': res.userInfo.nickName, 'photo': res.userInfo.avatarUrl
@@ -44,7 +45,7 @@ App({
                         console.log('sessionid', res.data.data.sessionid);
                         var sessionId = res.data.data.sessionid;
                         wx.setStorageSync('sessionId', sessionId);
-                        wx.setStorageSync('token', res.data.data.token)
+                        wx.setStorageSync('token', res.data.data.token);
                         ishas = true;
                         // wx.switchTab({
                         //   url: '/pages/home/home',

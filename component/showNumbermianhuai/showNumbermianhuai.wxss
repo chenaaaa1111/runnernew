@@ -51,6 +51,14 @@ height:150rpx;
   right: 27rpx;
   font-weight: 900;
 }
+.rightb{
+   width:352rpx;
+  height:142rpx;
+  position:absolute;
+  right:0rpx;
+  font-weight:900;
+  top:-14rpx;
+}
 .number{
   position: absolute;
   left: 38rpx;
@@ -74,7 +82,6 @@ height:150rpx;
 }
 .runnumb{
 color:#666;
-position:absolute;
 top:20rpx;
 width:329rpx;
 font-size:25rpx;
@@ -144,12 +151,14 @@ left:36rpx;
 height:258rpx;
 position:absolute;
 right:-2rpx;
-top:-83rpx;
+top:-51rpx;
+
 }
 .dataview{
- position:absolute;
- top:-29rpx;
- left:-271rpx;
+ text-align: center;
 
    
+}
+.imgright{
+  position: relative;
 }

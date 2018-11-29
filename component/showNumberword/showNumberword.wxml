@@ -24,14 +24,17 @@
             </view>
        </view>
   </view>
-    <view class='flima right' wx:else="{{!(isrunnerd=='false')}}">
+    <view class='flima rightb' wx:else="{{!(isrunnerd=='false')}}">
         <image src="./../../images/running/takeMessage.jpg" class='imass iright imessage'></image>
-        <view class='dataview'>
+        <view class='imgright'>
+               <view class='dataview'>
             <datepiker date="{{date}}"  binddatechange="datechange"></datepiker>
         </view>
         <view class='runnumb'>
-              <input class='qianming' placeholder='个人留名(五个字符以内)' value="{{words}}"   bindinput='bdinput'      bindconfirm='confirm' maxlength='5'></input>
-            </view>
+                <input class='qianming' placeholder='个人留名(五个字符以内)' value="{{words}}"   bindinput='bdinput'      bindconfirm='confirm' maxlength='5'></input>
+        </view>
+       
+         </view>
   </view>
   <view>
   

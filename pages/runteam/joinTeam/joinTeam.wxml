@@ -1,0 +1,48 @@
+<!--pages/runteam/joinTeam/joinTeam.wxml-->
+<!-- 加入跑团详情页面 -->
+<view>
+  <view class="logo-wrap">
+    <view class="position-more clearfix" bindtap="goRunRank">
+      <text class="more-text float-left">查看更多</text>
+      <image class="more-img float-right" mode="aspectFit" src="./../../../images/runteam/homepage/more.png"></image>
+    </view>
+    <view>
+      <image class="logo" src="{{team.logo}}" data-src="{{team.logo}}" mode="aspectFill"></image>
+      <view class="team-name">{{team.name}}</view>
+    </view>
+  </view>
+  <!-- 团队信息 -->
+  <view class="info-wrap">
+    <view>
+      <text class="label">团长:</text>
+      <text class="text">{{team.leadname || "--"}}</text>
+    </view>
+    <view>
+      <text class="label">跑团排名:</text>
+      <text class="text">{{"第" + (team.teamrank || "--") + "名"}}</text>
+    </view>
+    <view>
+      <text class="label">人数:</text>
+      <text class="text">{{team.people + "/100"}}</text>
+    </view>
+    <view>
+      <text class="label">步数总量:</text>
+      <text class="text">{{team.step + "步"}}</text>
+    </view>
+  </view>
+  <!-- 跑团口号 -->
+  <view class="row-wrap">
+    <view class="row-label">跑团口号：</view>
+    <text class="row-cnt">{{team.slogan}}</text>
+  </view>
+  <!-- 跑团简介 -->
+  <view class="row-wrap" style="border: none;">
+    <view class="row-label">跑团简介：</view>
+    <text class="row-cnt" style="min-height:180rpx;">{{team.intro}}</text>
+  </view>
+  <!-- 加入跑团 -->
+  <view class="bottomView" wx:if="{{!hasTeam}}">
+    <image style="width:100%;height:88rpx;" bindtap="applyTeam" mode="aspectFit" wx:if="{{team.handle === '1'}}" src="./../../../images/runteam/joinTeam.png"></image> 
+    <image style="width:100%;height:88rpx;" wx:if="{{team.handle === '0'&& team.checkstatus === '1'}}" mode="aspectFit" src="./../../../images/runteam/aduit.png"></image>
+  </view>
+</view>

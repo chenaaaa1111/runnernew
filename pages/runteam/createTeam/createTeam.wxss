@@ -1,0 +1,90 @@
+/* pages/runteam/createTeam/createTeam.wxss */
+
+page {
+  background-color: #f5f5f5;
+}
+
+.page-img {
+  height: 30rpx;    
+  width: 4rpx;
+  vertical-align: middle;
+  margin-right: 20rpx;
+}
+
+.logo-wrap {
+  height: 242rpx;
+  text-align: center;
+}
+
+.logo {
+  margin: 20rpx 0;
+  border-radius: 50%;
+  background-color: #ddd;
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.logo-text {
+  font-size: 32rpx;
+  color: #333;
+}
+
+.input-label {
+  padding-bottom: 10rpx;
+  padding-left: 30rpx;
+}
+
+.input-label text {
+  font-size: 30rpx;
+  color: #333;
+}
+
+.input-label .input-icon {
+  font-size: 28rpx;
+  line-height: 30rpx;
+  color: #ee2828;
+  margin-left: 20rpx;
+}
+
+.input-wrap {
+  padding-left: 50rpx;
+  padding-right: 58rpx;
+  background-color: #fff;
+}
+
+.input-wrap input {
+  height: 88rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.placeholder {
+  font-size: 30rpx;
+  color: #999;
+}
+
+.input-wrap textarea {
+  height: 300rpx;
+  font-size: 28rpx;
+  color: #333;
+  width: 100%;
+  padding: 30rpx 0rpx;
+}
+
+.switch-label {
+  padding-left: 30rpx;
+  padding-top: 30rpx;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.switch-label switch {
+  float: right;
+  margin-right: 70rpx;
+}
+
+.confirm-btn {
+  width: 690rpx;
+  height: 88rpx;
+  margin: 60rpx 30rpx;
+}

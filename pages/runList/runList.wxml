@@ -1,0 +1,17 @@
+<view class="search-box">
+  <input placeholder="请输入跑团名称" type="text" placeholder-class="search-box-placeholder" bindinput="resetTabList" bindfocus="checkSearch" bindblur="unSearch" bindconfirm='searchClub'/>
+  <icon bindtap="searchClub" type="search"/>
+</view>
+<view wx:if="{{isSearch}}" class="searchbg"></view>
+<view class="tab-head" wx:if="{{isTabList}}">
+  <text class="no-last-tab-title {{selectTabIndex === '1' ? 'selected-tab-title' : 'unseleted-tab-title'}}" data-index="1" bindtap="selectTab">人数最多</text>
+  <text class="{{selectTabIndex === '2' ? 'selected-tab-title' : 'unseleted-tab-title'}}" data-index="2" bindtap="selectTab">步数最多</text>
+</view>
+<scroll-view bindscrolltolower="getNextTeamList">
+  <view wx:for="{{teamList}}" wx:key="{{item.id}}">
+    <runteamItem data="{{item}}" data-index="{{index}}" bindtap="goJoinTeam"></runteamItem>
+  </view>
+  <view wx:if="{{teamList.length > 0}}" class="word-in-bottom">~~~到底咯~~~</view>
+  <view wx:if="{{isTabList && teamList.length <= 0}}" class="word-in-bottom">暂无跑团信息</view>
+</scroll-view>
+<view wx:if="{{!isTabList && teamList.length <= 0}}" class="no-run-club">不好意思暂时还没有你想要的跑团，自己去创建一个吧！</view>

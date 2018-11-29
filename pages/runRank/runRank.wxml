@@ -1,0 +1,35 @@
+<view class="top-three" wx:if="{{teamList.length > 0}}">
+  <view class="second">
+    <image mode="aspectFill" src="{{teamList[1].logo || teamList[1].uphoto}}" class="second-avator" />
+    <view>{{teamList[1].name || teamList[1].uname}}</view>
+  </view>
+  <view class="first">
+    <image mode="aspectFill" src="{{teamList[0].logo || teamList[0].uphoto}}" class="first-avator" />
+    <view>{{teamList[0].name || teamList[0].uname}}</view>
+  </view>
+  <view class="third">
+    <image mode="aspectFill" src="{{teamList[2].logo || teamList[2].uphoto}}" class="third-avator" />
+    <view>{{teamList[2].name}}</view>
+  </view>
+</view>
+<view class="tab-head">
+  <text class="no-last-tab-title {{selectTabIndex === '1' ? 'selected-tab-title' : 'unseleted-tab-title'}}" data-index="1" bindtap="selectTab">跑团排行</text>
+  <text class="{{selectTabIndex === '2' ? 'selected-tab-title' : 'unseleted-tab-title'}}" data-index="2" bindtap="selectTab">团内排行</text>
+</view>
+<scroll-view wx:if="{{teamList.length > 0}}">
+  <view wx:for="{{teamList}}" wx:key="{{item.id || item.uid}}">
+    <view class="club-item" data-idx="{{index}}" bindtap="goJoinTeam">
+      <view class="left-club-item">
+        <text class="rank-num">{{index + 1}}</text>
+        <image mode="aspectFill" src="{{item.logo || item.uphoto}}" />
+        <text class="top-clubs">{{item.name || item.uname}}</text>
+      </view>
+      <view class="right-club-item">
+        <text class="rank-in-club">{{item.people ? (item.people + "/100"):""}}</text>
+        <view class='steps'>{{item.step}}步</view>
+      </view>
+    </view>
+  </view>
+  <view class="word-in-bottom">~~~到底咯~~~</view>
+</scroll-view>
+<view wx:else class="word-in-bottom">暂无跑团信息</view>

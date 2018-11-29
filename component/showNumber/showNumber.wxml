@@ -2,7 +2,7 @@
 <view  wx:if="{{showNum}}" class='btNum'>
 <view class='runcontain'>
     <view class='flima'>
-        <image src="./../../images/running/runleft.png" class='imass ileft'></image>
+        <image src="/pagesB/images/running/runleft.png" class='imass ileft'></image>
         <view class='number'>
              <view class='runnumber'>
               {{todayNum}}
@@ -14,7 +14,7 @@
           
     </view>
      <view class='flima right' wx:if="{{isrunnerd=='false'}}">
-        <image src="./../../images/running/runright.png" class='imass iright'></image>
+        <image src="/pagesB/images/running/runright.png" class='imass iright'></image>
          <view class='numberright'>
             <view class='runnumber'>
               下一目标
@@ -25,13 +25,19 @@
        </view>
   </view>
     <view class='flima right' wx:else="{{!(isrunnerd=='false')}}">
-        <image src="./../../images/running/takeMessage.jpg" class='imass iright imessage'></image>
-        <view class='dataview'>
+        <image src="/pagesB/images/running/takeMessage.jpg" class='imass iright imessage'></image>
+         <view>
+         
+         </view>
+        <view class='imgright'>
+               <view class='dataview'>
             <datepiker date="{{date}}"  binddatechange="datechange"></datepiker>
         </view>
         <view class='runnumb'>
               <input class='qianming' placeholder='个人留名(五个字符以内)' value="{{words}}"   bindinput='bdinput'      bindconfirm='confirm' maxlength='5'></input>
             </view>
+        
+        </view>
   </view>
   <view>
   
@@ -39,5 +45,5 @@
   </view> 
 </view>
 <view wx:if="{{!showNum}}" >
-   <image class="start " bindtap='startRun' src='./../../images/running/startRun.jpg'></image>
+   <image class="start " bindtap='startRun' src='/pagesB/images/running/startRun.jpg'></image>
 </view>

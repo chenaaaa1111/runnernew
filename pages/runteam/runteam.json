@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "运动酷咖",
+  "usingComponents": {
+    "runteamItem": "./../../component/runteamItem/runteamItem"
+  }
+}
